@@ -3,6 +3,8 @@ Full own memo about technics of machine learning with python
 
 ---
 
+### Topics
+
 1. Data loading
 2. Explore data
 3. Clean data
@@ -13,3 +15,17 @@ Full own memo about technics of machine learning with python
     4. Natural language processing
 5. Model testing
 6. Pipelines
+
+---
+
+### Tools
+
+* Anaconda environment
+* Stand alone envs with docker
+
+---
+### Usefull trics
+
+* Data manipulation in Dataframes (cheat sheet)
+* Working with json and Dataframes
+

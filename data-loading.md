@@ -21,12 +21,25 @@ my_dataframe = pd.read_sql_query(query, engine)
 Note that sqlachemy has a lot of connectors to connect to other databases as pgSQL...
 
 ## Load from CSV
+```python
+my_dataframe = pd.read_csv(
+    './my_file.csv',
+    sep=','                 # Value separator
+    dtype={'col_a': int},   # col_a as integer
+    usecols=['col_a', 'col_b'], # Load only cols
+    parse_dates=['col_b'],      # Intepret col_b as a date
+    skiprows=10,                # Skip the first 10 rows
+    na_values=['.', '??']       # Any '.' or '??' values as NA
+)
+```
 
 ## Save to CSV
 
 ```python
 import pandas as pd
-my_dataframe.to_csv("data.csv", index=False)
+my_dataframe.to_csv(
+    './my_file.csv',
+    index=False         # Do not export index
+)
 ```
 
-index=False indicate that index column must not be exported in csv file

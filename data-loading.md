@@ -24,8 +24,8 @@ Note that sqlachemy has a lot of connectors to connect to other databases as pgS
 ```python
 my_dataframe = pd.read_csv(
     './my_file.csv',
-    sep=','                 # Value separator
-    dtype={'col_a': int},   # col_a as integer
+    sep=','                     # Value separator
+    dtype={'col_a': int},       # col_a as integer
     usecols=['col_a', 'col_b'], # Load only cols
     parse_dates=['col_b'],      # Intepret col_b as a date
     skiprows=10,                # Skip the first 10 rows

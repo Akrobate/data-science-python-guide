@@ -22,6 +22,8 @@ Note that sqlachemy has a lot of connectors to connect to other databases as pgS
 
 ## Load from CSV
 ```python
+import pandas as pd
+
 my_dataframe = pd.read_csv(
     './my_file.csv',
     sep=','                     # Value separator
@@ -37,6 +39,7 @@ my_dataframe = pd.read_csv(
 
 ```python
 import pandas as pd
+
 my_dataframe.to_csv(
     './my_file.csv',
     index=False         # Do not export index

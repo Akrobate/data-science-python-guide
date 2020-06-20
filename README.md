@@ -21,7 +21,8 @@ Full own memo about technics of machine learning with python
 
 ### Tools
 
-* Anaconda environment
+* Anaconda
+    * Quick install Anaconda Ubuntu
 * Stand alone envs with docker
 
 ---

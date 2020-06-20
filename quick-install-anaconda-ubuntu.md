@@ -19,6 +19,19 @@ chmod +x Anaconda3-2020.02-Linux-x86_64.sh
 ./Anaconda3-2020.02-Linux-x86_64.sh
 ```
 
+### Desactivate default base env
+
+Once all is installer conda will automaticly switch all your new terminals sessions on the env (base)
+
+To prevent this behaviour execute
+
+```sh
+conda config --set auto_activate_base false
+```
+
+This will create/update your ~/.condarc file to prevent automaticly activating base env
+
+
 ## Using Anaconda navigator
 
 To start working with anaconda you will need to launch Anaconde Navigator. You can do this with this command line

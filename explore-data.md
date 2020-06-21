@@ -15,3 +15,18 @@ my_dataframe.describe()
 my_dataframe.shape
 
 ```
+
+## Data visualisation with panda
+
+Exploring sepal length data set repartition by creating a simple histogram representation
+
+```python
+from sklearn import datasets
+import pandas as pd
+
+iris = datasets.load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+iris_df['sepal length (cm)'].hist(bins=20)
+```
+
+![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-hist-20-bins.png?raw=true)

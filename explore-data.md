@@ -35,7 +35,11 @@ my_dataframe['ColumnName'].value_counts(dropna=False)
 
 ## Data visualisation with panda
 
+### histograms
+
 Exploring sepal length data set repartition by creating a simple histogram representation
+
+#### Using pandas hist method
 
 ```python
 from sklearn import datasets
@@ -47,3 +51,24 @@ iris_df['sepal length (cm)'].hist(bins=20)
 ```
 
 ![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-hist-20-bins.png?raw=true)
+
+
+#### Using matplotlib to draw historgram
+
+```python
+import matplotlib.pyplot as plt
+from sklearn import datasets
+import pandas as pd
+
+iris = datasets.load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+iris_df['sepal length (cm)'].plot(
+    kind='hist',
+    rot=90,       # X label angle
+    logx=False,   # log scale on X axis
+    logy=False,   # log scale on Y axis
+    bins=20       # Number of wanted bars
+)
+
+plt.show()
+```

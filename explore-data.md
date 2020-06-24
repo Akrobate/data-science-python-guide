@@ -74,3 +74,22 @@ plt.show()
 ```
 
 ![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-matplotlib-hist-20-bins.png?raw=true)
+
+
+### Box plots
+
+```python
+# Import necessary modules
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create the boxplot
+df.boxplot(
+    column='ContinusValueColumnName',
+    by='LabelColumnColumnName',
+    rot=90
+)
+
+# Display the plot
+plt.show()
+```

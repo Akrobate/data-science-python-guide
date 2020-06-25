@@ -79,17 +79,29 @@ plt.show()
 ### Box plots
 
 ```python
-# Import necessary modules
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
 
-# Create the boxplot
+# load data and add targets to dataframe
+iris = load_iris()
+df= pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+
+# Set categorical values in column named species
+df['species'] = pd.Categorical.from_codes(
+    iris.target,
+    iris.target_names
+)
+
 df.boxplot(
-    column='ContinusValueColumnName',
-    by='LabelColumnColumnName',
+    column='sepal width (cm)',
+    by='species',
     rot=90
 )
 
-# Display the plot
 plt.show()
 ```

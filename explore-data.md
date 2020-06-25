@@ -105,3 +105,5 @@ df.boxplot(
 
 plt.show()
 ```
+
+![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-width-pandas-boxplot.png?raw=true)

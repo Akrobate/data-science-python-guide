@@ -107,3 +107,25 @@ plt.show()
 ```
 
 ![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-width-pandas-boxplot.png?raw=true)
+
+
+### Matrix scatter plot
+
+To quick preview how variables are correlated
+
+```python
+import pandas as pd
+from sklearn.datasets import load_iris
+
+df= pd.DataFrame(data = iris.data, columns= iris.feature_names)
+
+_ = pd.plotting.scatter_matrix(
+    df,
+    c = iris.target,    # Colors are targets
+    figsize=[10, 10],   # Size of all graph
+    s = 100,            # Size of each marker
+    marker = 'D',       # marker type
+)
+
+```
+![Iris pandas plotting scatter matrix](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-matrix-scatter-plot.png?raw=true)

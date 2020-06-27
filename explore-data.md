@@ -125,6 +125,8 @@ iris_df.plot(
 
 plt.show()
 ```
+![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-2-vars-scatter-plot.png?raw=true)
+
 
 ### Matrix scatter plot
 

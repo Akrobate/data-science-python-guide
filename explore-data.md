@@ -108,6 +108,23 @@ plt.show()
 
 ![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-width-pandas-boxplot.png?raw=true)
 
+### Scatter plot of two variables
+
+```python
+import matplotlib.pyplot as plt
+from sklearn import datasets
+import pandas as pd
+
+iris = datasets.load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+iris_df.plot(
+    kind='scatter',
+    x='petal length (cm)',   # variable on x axis
+    y='petal width (cm)',    # variable on y axis
+)
+
+plt.show()
+```
 
 ### Matrix scatter plot
 

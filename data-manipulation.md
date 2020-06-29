@@ -24,6 +24,8 @@ import pandas as pd
 melted_df = pd.melt(
     frame=my_df,
     value_vars=['Cols', 'to', 'melt'],
-    id_vars=['ColsToPreserve']
+    id_vars=['ColsToPreserve'],
+    var_name='VariableName',        # Optionnal: set the name of variable column
+    value_name='ValueName'          # Optionnal: set the name of the value column
 )
 ```

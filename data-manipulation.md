@@ -15,7 +15,9 @@ dataframe_a = pd.merge(
     right_on='id')
 ```
 
-## Melt data
+## Melt / Pivot data
+
+### Melt dataframe
 
 Usefull trick to transform cols to rows
 
@@ -25,7 +27,22 @@ melted_df = pd.melt(
     frame=my_df,
     value_vars=['Cols', 'to', 'melt'],
     id_vars=['ColsToPreserve'],
-    var_name='VariableName',        # Optionnal: set the name of variable column
-    value_name='ValueName'          # Optionnal: set the name of the value column
+    var_name='VariableColumnName',        # Optionnal: set the name of variable column
+    value_name='ValueColumnName'          # Optionnal: set the name of the value column
 )
 ```
+
+### Pivot datafram
+
+Permit to transform a melted data to columns based data
+
+```python
+import pandas as pd
+my_dataframe = melted_df.pivot_table(
+    index=['PreservedCols'],
+    columns='VariableColumnName',
+    values='ValueColumnName'
+)
+
+```
+

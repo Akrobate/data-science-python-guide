@@ -34,15 +34,24 @@ melted_df = pd.melt(
 
 ### Pivot datafram
 
-Permit to transform a melted data to columns based data
+Permit to transform a melted data to columns based data. If multiple lines for specific index, an agregation function can be used.
 
 ```python
 import pandas as pd
+import numpy as np
 my_dataframe = melted_df.pivot_table(
     index=['PreservedCols'],
     columns='VariableColumnName',
-    values='ValueColumnName'
+    values='ValueColumnName',
+    aggfunc=np.mean             # here we provide the average value of all sames preserved cols
 )
 
 ```
 
+After pivoting data, the index can be altered. To get back a simple incremental RangeIndex you need to reset_index() on the dataframe
+
+```Python
+# reseting indexes on dataframe
+my_dataframe = my_dataframe.index.reset_index()
+print(my_dataframe.index) # will show new RangeIndex
+```

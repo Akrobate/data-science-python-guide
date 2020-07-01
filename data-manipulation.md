@@ -15,6 +15,24 @@ dataframe_a = pd.merge(
     right_on='id')
 ```
 
+## Concat dataframe rows / cols
+
+Example of concatenating rows of n dataframes
+
+```python
+import pandas as pd
+
+rows_concatenated_df = pd.concat(
+    [df1, df2, dfn],
+    axis = 0    # 0 is rows concatenation
+)
+
+cols_concatenated_df = pd.concat(
+    [df1, df2, dfn],
+    axis = 1    # 1 is cols concatenation
+)
+```
+
 ## Melt / Pivot data
 
 ### Melt dataframe
@@ -32,7 +50,7 @@ melted_df = pd.melt(
 )
 ```
 
-### Pivot datafram
+### Pivot dataframe
 
 Permit to transform a melted data to columns based data. If multiple lines for specific index, an agregation function can be used.
 
@@ -54,4 +72,33 @@ After pivoting data, the index can be altered. To get back a simple incremental 
 # reseting indexes on dataframe
 my_dataframe = my_dataframe.index.reset_index()
 print(my_dataframe.index) # will show new RangeIndex
+```
+
+## Manipulating columns as string
+
+```Python
+import numpy as np
+import pandas as pd
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+
+# Set categorical values in column named species
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+
+# in this column we are going to have s of setosa
+df['First_letter'] = df.species.str[0]
+
+# split will contain [set, sa] of setosa
+df['split'] = df.species.str.split('o')
+
+# get value from splitted value
+df['split_first_part'] = df['split'].str.get(0)
+df['split_second_part'] = df['split'].str.get(1)
+
 ```

@@ -21,6 +21,9 @@ my_dataframe = pd.read_sql_query(query, engine)
 Note that sqlachemy has a lot of connectors to connect to other databases as pgSQL...
 
 ## Load from CSV
+
+### Simple unitary loading
+
 ```python
 import pandas as pd
 
@@ -33,6 +36,29 @@ my_dataframe = pd.read_csv(
     skiprows=10,                # Skip the first 10 rows
     na_values=['.', '??']       # Any '.' or '??' values as NA
 )
+```
+
+### Loading multiple csv files
+
+Sometimes we need to load multiple csv files as a single dataframe
+
+```python
+
+import glob
+import pandas as pd
+
+df_list = []
+
+# list all csv files 
+csv_files = glob.glob('*.csv')
+
+for csv_file in csv_files:
+    df = pd.read_csv(csv_file)
+    df_list.append(df)
+
+# Concatenate df_list
+concatenated_df = pd.concat(df_list)
+
 ```
 
 ## Save to CSV

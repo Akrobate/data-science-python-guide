@@ -102,3 +102,23 @@ df['split_first_part'] = df['split'].str.get(0)
 df['split_second_part'] = df['split'].str.get(1)
 
 ```
+
+## Changing columns types
+
+Previews types with .info() dataframe method
+
+### Object to categorical
+
+When some data is imported strings will be of object type. It is possible to change it to categorical type when needed to improve performances
+
+```python
+df.my_col = df.my_col.astype('category')
+```
+
+### Object to numeric type
+
+error coerce will put NaN values when value was not converted to numeric type
+
+```python
+df.my_col = pd.to_numeric(df['my_col'], errors='coerce')
+```

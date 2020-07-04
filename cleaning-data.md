@@ -16,3 +16,13 @@ iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
 sepal_length_cm_mean = iris_df['sepal length (cm)'].mean()
 iris_df['sepal length (cm)'].fillna(sepal_length_cm_mean)
 ```
+
+## Checking by Asserting null data
+
+```python
+# check no null data
+assert pd.notnull(iris_df).all().all()
+
+# Check all values are >= 0
+assert  (iris_df >= 0).all().all()
+```

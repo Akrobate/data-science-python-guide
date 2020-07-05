@@ -123,8 +123,17 @@ iris_df.plot(
     y='petal width (cm)',    # variable on y axis
 )
 
+# Optionnal custumize axis labels
+plt.xlabel('Petal length in centimeters)')
+plt.ylabel('Petal width in centimeters')
+
+# Optionnal specify axis limits
+plt.xlim(0, 7)
+plt.ylim(0, 2.5)
+
 plt.show()
 ```
+
 ![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-2-vars-scatter-plot.png?raw=true)
 
 

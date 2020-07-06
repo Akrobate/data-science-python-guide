@@ -137,6 +137,48 @@ plt.show()
 ![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-2-vars-scatter-plot.png?raw=true)
 
 
+### Draw multiple plots with subplots
+
+```python
+import matplotlib.pyplot as plt
+from sklearn import datasets
+import pandas as pd
+
+iris = datasets.load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+
+# First subplot (index = 1)
+plt.subplot(
+    2,  # nbr of rows
+    1,  # nbr of cols
+    1   # index. Warning: starts at 1
+)
+
+# Create a line plot of life expectancy per year
+iris_df.plot(
+    kind='scatter',
+    x='petal length (cm)',   # variable on x axis
+    y='petal width (cm)',    # variable on y axis
+)
+
+#  Second subplot (index = 2)
+plt.subplot(
+    2,  # nbr of rows
+    1,  # nbr of cols
+    2   # index
+)
+
+iris_df.plot(
+    kind='scatter',
+    x='petal length (cm)',   # variable on x axis
+    y='petal width (cm)',    # variable on y axis
+)
+
+plt.tight_layout()      # Method to adjust subplots sizes params
+plt.show()
+```
+
+
 ### Matrix scatter plot
 
 To quick preview how variables are correlated
@@ -157,3 +199,5 @@ _ = pd.plotting.scatter_matrix(
 
 ```
 ![Iris pandas plotting scatter matrix](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-matrix-scatter-plot.png?raw=true)
+
+

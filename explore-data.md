@@ -137,6 +137,16 @@ plt.show()
 ![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-2-vars-scatter-plot.png?raw=true)
 
 
+### Draw multiple plots on same chart
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(x_axis_data, y_axis_1_data, color='red')
+plt.plot(x_axis_data, y_axis_2_data, color='blue')
+plt.show()
+```
+
 ### Draw multiple plots with subplots
 
 ```python

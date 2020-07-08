@@ -147,7 +147,7 @@ plt.plot(x_axis_data, y_axis_2_data, color='blue')
 plt.show()
 ```
 
-### Draw multiple plots with subplots
+### Draw multiple datagrame plots with subplots
 
 ```python
 import matplotlib.pyplot as plt
@@ -157,37 +157,29 @@ import pandas as pd
 iris = datasets.load_iris()
 iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
 
-# First subplot (index = 1)
-plt.subplot(
-    2,  # nbr of rows
-    1,  # nbr of cols
-    1   # index. Warning: starts at 1
-)
+figure, axe = plt.subplots(2,1)  # rows, cols
 
-# Create a line plot of life expectancy per year
 iris_df.plot(
+    ax=axe[0],
     kind='scatter',
     x='petal length (cm)',   # variable on x axis
     y='petal width (cm)',    # variable on y axis
-)
-
-#  Second subplot (index = 2)
-plt.subplot(
-    2,  # nbr of rows
-    1,  # nbr of cols
-    2   # index
+    color='green'
 )
 
 iris_df.plot(
+    ax=axe[1],
     kind='scatter',
-    x='petal length (cm)',   # variable on x axis
-    y='petal width (cm)',    # variable on y axis
+    x='sepal length (cm)',   # variable on x axis
+    y='sepal width (cm)',    # variable on y axis
+    color='red'
 )
 
 plt.tight_layout()      # Method to adjust subplots sizes params
 plt.show()
 ```
 
+![Iris subplot dataframe plot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-subplot-dataframe-plot.png?raw=true)
 
 ### Matrix scatter plot
 

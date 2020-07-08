@@ -75,6 +75,33 @@ plt.show()
 
 ![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-matplotlib-hist-20-bins.png?raw=true)
 
+### 2D Histogram
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+
+plt.hist2d(
+    iris_df['petal length (cm)'],
+    iris_df['petal width (cm)'],
+    bins=(10, 10),      # x bins, y bins
+    range=((0,8),(0,3)) # ((xmin, xmax), (ymin, ymax))
+)
+
+plt.colorbar()
+
+plt.xlabel('petal length (cm)')
+plt.ylabel('petal width (cm)')
+plt.title('2D Histogram')
+plt.show()
+```
+
+![Iris Plot 2d histogram](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-plot-2dhist.png?raw=true)
+
 
 ### Box plots
 

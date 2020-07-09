@@ -7,6 +7,8 @@ Full own memo about technics of machine learning with python
 
 1. Data loading
 2. Explore data
+    1. Fundamentals of data exploration
+    2. Visualize data
 3. Cleaning data
 4. Data manipulation
 5. Machine learning

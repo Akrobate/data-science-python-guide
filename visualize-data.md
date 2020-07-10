@@ -195,3 +195,21 @@ _ = pd.plotting.scatter_matrix(
 ![Iris pandas plotting scatter matrix](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-matrix-scatter-plot.png?raw=true)
 
 
+## Customize plots
+
+```python
+# Name plot
+plt.title('The name of the chart')
+```
+
+```python
+# Generate a legend
+plt.legend(loc='lower center')
+```
+
+```python
+# Name axis
+plt.xlabel('Time')
+plt.ylabel('My value')
+```
+

@@ -213,3 +213,22 @@ plt.xlabel('Time')
 plt.ylabel('My value')
 ```
 
+```python
+# Specifing coordinates and size of a plot in chart
+
+# first plot
+plt.axes([
+    0, # x plot start at 0
+    0, # y plot start at 0
+    0.5, # plot width (50% of chart)
+    0.9 # plot height (100% of chart)
+])
+
+plt.plot(.....)
+# second plot
+plt.axes(....)
+plt.plot(.....)
+....
+
+
+```

@@ -232,9 +232,12 @@ plt.plot(....)
 ```
 
 ```python
-# Setting axis ranges
+# Setting axis ranges per axis
 plt.xlim([10,20])
 plt.ylim([0,30])
+
+# setting both at once
+plt.axis((10,20,0,30))
 ```
 
 ## Saving plot

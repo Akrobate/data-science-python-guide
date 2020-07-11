@@ -223,12 +223,24 @@ plt.axes([
     0.5, # plot width (50% of chart)
     0.9 # plot height (100% of chart)
 ])
+plt.plot(....)
 
-plt.plot(.....)
 # second plot
 plt.axes(....)
-plt.plot(.....)
+plt.plot(....)
 ....
-
-
 ```
+
+```python
+# Setting axis ranges
+plt.xlim([10,20])
+plt.ylim([0,30])
+```
+
+## Saving plot
+
+```python
+plt.savefig('my_plot_chart.png')
+```
+
+

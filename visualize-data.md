@@ -88,6 +88,9 @@ plt.pcolor(X + Y)
 plt.show()
 ```
 
+![2D graph example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/2D-graph-example.png?raw=true)
+
+
 ## Box plots
 
 ```python

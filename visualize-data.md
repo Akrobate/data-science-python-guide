@@ -68,6 +68,26 @@ plt.show()
 ![Iris Plot 2d histogram](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-plot-2dhist.png?raw=true)
 
 
+## 2D Grapgh
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Linear array from -10 to 10 with 25 elements
+x_array = np.linspace(-10, 10, 25)
+
+# Linear array from -5 to 5 with 12 elements
+y_array = np.linspace(-5, 5, 12)
+
+# Meshgrid will generate 2 2D arrays
+X, Y = np.meshgrid(x_array, y_array)
+
+plt.pcolor(X + Y)
+plt.show()
+```
+
 ## Box plots
 
 ```python

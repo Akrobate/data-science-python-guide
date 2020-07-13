@@ -30,4 +30,6 @@ my_dataframe.columns
 # returns count of each value in column (with NaN here)
 my_dataframe['ColumnName'].value_counts(dropna=False)
 
+# returns unique values of a column
+my_dataframe['ColumnName'].unique()
 ```

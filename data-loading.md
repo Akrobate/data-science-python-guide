@@ -29,12 +29,13 @@ import pandas as pd
 
 my_dataframe = pd.read_csv(
     './my_file.csv',
-    sep=','                     # Value separator
-    dtype={'col_a': int},       # col_a as integer
-    usecols=['col_a', 'col_b'], # Load only cols
-    parse_dates=['col_b'],      # Intepret col_b as a date
-    skiprows=10,                # Skip the first 10 rows
-    na_values=['.', '??']       # Any '.' or '??' values as NA
+    decimal = ",",                # Optionnal decimal separator
+    sep = ',',                    # Optionnal value separator
+    dtype = {'col_a': int},       # Optionnal col_a as integer
+    usecols = ['col_a', 'col_b'], # Optionnal Load only cols
+    parse_dates = ['col_b'],      # Optionnal Intepret col_b as a date
+    skiprows = 10,                # Optionnal Skip the first 10 rows
+    na_values = ['.', '??']       # Optionnal Any '.' or '??' values as NA
 )
 ```
 

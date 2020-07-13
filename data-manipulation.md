@@ -122,3 +122,13 @@ error coerce will put NaN values when value was not converted to numeric type
 ```python
 df.my_col = pd.to_numeric(df['my_col'], errors='coerce')
 ```
+
+## Sorting panda dataframe
+
+```python
+# sorting with a single value
+result = df.sort_values('my_col_a', ascending = True)
+
+# sorting by multiple values
+result = df.sort_values(['my_col_a', 'my_col_b'], ascending=[1, 0])
+```

@@ -1,6 +1,6 @@
 # Data visualisation with panda
 
-## histograms
+## Histograms
 
 Exploring sepal length data set repartition by creating a simple histogram representation
 
@@ -70,6 +70,7 @@ plt.show()
 
 ## 2D Grapgh
 
+### Raw 2D graph
 
 ```python
 import numpy as np
@@ -89,6 +90,34 @@ plt.show()
 ```
 
 ![2D graph example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/2D-graph-example.png?raw=true)
+
+
+### Contour graph
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x_array = np.linspace(-10, 10, 25)
+y_array = np.linspace(-5, 5, 12)
+
+X, Y = np.meshgrid(x_array, y_array)
+
+Z = X + Y
+
+# Example contour graph with 5 contours
+plt.subplot(1,2,1)
+plt.contour(X, Y, Z, 5)  # 5 is number of contours
+
+# Example filled contour graph with 5 contours
+plt.subplot(1,2,2)
+plt.contourf(X, Y, Z, 5)
+
+plt.tight_layout()
+plt.show()
+```
+![2D graph contour](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/2D-graph-contour.png?raw=true)
+
 
 
 ## Box plots

@@ -42,6 +42,8 @@ plt.show()
 
 ## 2D Histogram
 
+### Standart 2D histogram
+
 ```python
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -67,8 +69,35 @@ plt.show()
 
 ![Iris Plot 2d histogram](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-plot-2dhist.png?raw=true)
 
+### Hexbin 2D histogram
 
-## 2D Grapgh
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+
+plt.hexbin(
+    iris_df['petal length (cm)'],
+    iris_df['petal width (cm)'],
+    gridsize=(10,8),      # x bins, y bins
+    extent = (0,8,0,3),   # xmin, xmax, ymin, ymax
+)
+
+plt.colorbar()
+
+plt.xlabel('petal length (cm)')
+plt.ylabel('petal width (cm)')
+plt.title('2D hexbin histogram')
+plt.show()
+```
+
+![Hexbin 2D histogram](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/2D-hexbin-histogram-example.png?raw=true)
+
+
+## 2D Graph
 
 ### Raw 2D graph
 

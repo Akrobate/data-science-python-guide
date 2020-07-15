@@ -297,6 +297,13 @@ plt.axis((10,20,0,30))
 plt.contour(... , cmap = 'summer')
 plt.contourf(... , cmap = 'winter')
 plt.pcolor(... , cmap = 'copper')
+plt.hist2d(... , cmap = 'hot')
+
+# 'binary', 'gist_yarg', 'gist_gray', 'gray'
+# 'bone', 'pink', 'spring', 'summer',
+# 'autumn', 'winter', 'cool', 'Wistia',
+# 'hot', 'afmhot', 'gist_heat', 'copper'
+
 ```
 
 ## Saving plot

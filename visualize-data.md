@@ -292,6 +292,13 @@ plt.ylim([0,30])
 plt.axis((10,20,0,30))
 ```
 
+```python
+# setting colormap in graphs with cmap param
+plt.contour(... , cmap = 'summer')
+plt.contourf(... , cmap = 'winter')
+plt.pcolor(... , cmap = 'copper')
+```
+
 ## Saving plot
 
 ```python

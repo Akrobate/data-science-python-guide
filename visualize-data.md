@@ -295,6 +295,12 @@ plt.ylabel('My value')
 ```
 
 ```python
+# Setting figure size
+from matplotlib.pyplot import figure
+figure(figsize = (8, 6), dpi=80) # witdh, height, resolution
+```
+
+```python
 # Specifing coordinates and size of a plot in chart
 
 # first plot
@@ -321,6 +327,12 @@ plt.ylim([0,30])
 plt.axis((10,20,0,30))
 ```
 
+
+
+### Color maps
+
+Some methods with color map param
+
 ```python
 # setting colormap in graphs with cmap param
 plt.contour(... , cmap = 'summer')
@@ -334,6 +346,45 @@ plt.hist2d(... , cmap = 'hot')
 # 'hot', 'afmhot', 'gist_heat', 'copper'
 
 ```
+
+Previes available colormaps
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+cmap_list = [
+    'binary',
+    'gist_yarg',
+    'gist_gray',
+    'gray',
+    'bone',
+    'pink',
+    'spring',
+    'summer',
+    'autumn',
+    'winter',
+    'cool',
+    'Wistia',
+    'hot',
+    'afmhot',
+    'gist_heat',
+    'copper'
+]
+
+plt.figure(figsize=(10, 8))
+
+for index, cmap in enumerate(cmap_list):
+    plt.subplot(8,2, index + 1)
+    plt.title(cmap)
+    plt.pcolor([np.linspace(-10, 10, 25)], cmap = cmap)
+
+plt.tight_layout()
+plt.show()
+```
+
+![Color map example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/color-map-example.png?raw=true)
+
 
 ## Saving plot
 

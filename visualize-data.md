@@ -275,6 +275,22 @@ _ = pd.plotting.scatter_matrix(
 ```
 ![Iris pandas plotting scatter matrix](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-matrix-scatter-plot.png?raw=true)
 
+## Viewing Linear regressions
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+
+sns.lmplot(x='petal width (cm)', y='petal length (cm)', data=iris_df)
+plt.show()
+```
+
+![Seaborn linear regression example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-example.png?raw=true)
 
 ## Customize plots
 

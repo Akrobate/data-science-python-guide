@@ -74,6 +74,16 @@ my_dataframe = my_dataframe.index.reset_index()
 print(my_dataframe.index) # will show new RangeIndex
 ```
 
+## Managing indexes
+
+```python
+# Setting index
+my_df = my_df.set_index('column name')
+
+# resetting index
+my_df = my_df['column name'].reset_index()
+```
+
 ## Manipulating columns as string
 
 ```Python

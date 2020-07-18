@@ -275,7 +275,9 @@ _ = pd.plotting.scatter_matrix(
 ```
 ![Iris pandas plotting scatter matrix](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-matrix-scatter-plot.png?raw=true)
 
-## Viewing Linear regressions
+## Preview Linear regressions
+
+### Simple linear regression
 
 ```python
 import pandas as pd
@@ -291,6 +293,38 @@ plt.show()
 ```
 
 ![Seaborn linear regression example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-example.png?raw=true)
+
+### Make regression on grouped data
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+df['species'] = pd.Categorical.from_codes(
+    iris.target,
+    iris.target_names
+)
+
+sns.lmplot(
+    x='sepal width (cm)',
+    y='sepal length (cm)',
+    data=df,
+    hue='species',
+    palette='Set1'
+)
+
+plt.show()
+```
+
+![Seaborn linear regression grouped example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-grouped-example.png?raw=true)
 
 ## Customize plots
 

@@ -294,6 +294,31 @@ plt.show()
 
 ![Seaborn linear regression example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-example.png?raw=true)
 
+
+### Previewing residuals around regression
+
+This graph will represent how points are variating around the regression
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+
+sns.residplot(
+    x = 'petal width (cm)',
+    y = 'petal length (cm)',
+    data = iris_df,
+    color = 'red'
+)
+plt.show()
+```
+
+![seaborn regression residual plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-regression-residual-plot-example.png?raw=true)
+
 ### Make regression on grouped data
 
 ```python

@@ -294,6 +294,29 @@ plt.show()
 
 ![Seaborn linear regression example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-example.png?raw=true)
 
+### Linear regression setting ordrer
+
+Some times line as linear regressions is not a good enough solution. So it is possible to set the order of the regression function with "order" param. This param is also available in redisplot method.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
+
+sns.lmplot(
+    x='petal width (cm)',
+    y='petal length (cm)',
+    order = 2, # Set the order here
+    data=iris_df
+)
+plt.show()
+```
+
+![seaborn linear regression order 2 example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-order-2-example.png?raw=true)
 
 ### Previewing residuals around regression
 

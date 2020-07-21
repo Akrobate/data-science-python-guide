@@ -181,6 +181,38 @@ plt.show()
 
 ![Iris sepal width boxplot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-width-pandas-boxplot.png?raw=true)
 
+## Strip plots
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df= pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+
+df['species'] = pd.Categorical.from_codes(
+    iris.target,
+    iris.target_names
+)
+
+sns.stripplot(
+    y='sepal width (cm)',
+    x='species',
+    data=df,
+    size=7,
+    jitter=True
+)
+
+plt.show()
+```
+
+![Seaborn strip plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-strip-plot-example.png?raw=true)
+
 ## Scatter plot of two variables
 
 ```python

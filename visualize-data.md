@@ -406,6 +406,37 @@ plt.show()
 
 ![Seaborn linear regression grouped example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-grouped-example.png?raw=true)
 
+### Make multiple regressions on data
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+sns.lmplot(
+    x='sepal width (cm)',
+    y='sepal length (cm)',
+    data=df,
+    row='species',
+    height=2,
+    aspect=2.5
+)
+
+plt.show()
+```
+
+![Seaborn linear regression rows example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-rows-example.png?raw=true)
+
 ## Customize plots
 
 ```python

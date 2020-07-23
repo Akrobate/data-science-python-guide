@@ -213,6 +213,47 @@ plt.show()
 
 ![Seaborn strip plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-strip-plot-example.png?raw=true)
 
+## Swarm plots
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+plt.figure(figsize=(8,8))
+
+plt.subplot(2,1,1)
+sns.swarmplot(
+    x='species',
+    y='sepal width (cm)',
+    data=df
+)
+
+plt.subplot(2,1,2)
+sns.swarmplot(
+    x='sepal length (cm)',
+    y='sepal width (cm)',
+    data=df,
+    hue='species',
+    orient='h'
+)
+
+plt.show()
+```
+
+![Seaborn swarm plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-swarm-plot-example.png?raw=true)
+
+
 ## Scatter plot of two variables
 
 ```python

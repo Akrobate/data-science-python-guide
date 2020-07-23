@@ -282,6 +282,46 @@ plt.show()
 
 ![Seaborn violin plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-violin-plot-example.png?raw=true)
 
+## Draw joint plot
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(data = np.c_[iris.data, iris.target], columns= iris.feature_names + ['target'])
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+sns.jointplot(x='sepal width (cm)', y='sepal length (cm)', data=df)
+
+plt.show()
+```
+
+![Seaborn joint plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-joint-plot-example.png?raw=true)
+
+## Draw joint plot hex
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(data = np.c_[iris.data, iris.target], columns= iris.feature_names + ['target'])
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+sns.jointplot(x='sepal width (cm)', y='sepal length (cm)', data=df, kind='hex')
+
+plt.show()
+```
+
+![Seaborn joint plot hex example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-joint-plot-hex-example.png?raw=true)
+
 
 ## Scatter plot of two variables
 

@@ -396,6 +396,40 @@ plt.show()
 
 ![Iris subplot dataframe plot](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-subplot-dataframe-plot.png?raw=true)
 
+## Pair plot (matrix scatter plot) with seaborn
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(data = iris.data, columns= iris.feature_names)
+
+sns.pairplot(df)
+plt.show()
+```
+![Seaborn pair plot simple example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-pair-plot-simple-example.png?raw=true)
+
+## Pair plot, regression and grouping (matrix scatter plot) with seaborn
+
+```python
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(data = iris.data, columns= iris.feature_names)
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+sns.pairplot(df, hue='species', kind='reg')
+plt.show()
+```
+![Seaborn pair plot reg hue example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-pair-plot-reg-hue-example.png?raw=true)
+
 ## Matrix scatter plot
 
 To quick preview how variables are correlated
@@ -413,9 +447,29 @@ _ = pd.plotting.scatter_matrix(
     s = 100,            # Size of each marker
     marker = 'D',       # marker type
 )
-
 ```
 ![Iris pandas plotting scatter matrix](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-pandas-matrix-scatter-plot.png?raw=true)
+
+
+## Heatmaps (correlation)
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(data = iris.data, columns= iris.feature_names)
+df['species'] = pd.Categorical.from_codes(iris.target, iris.target_names)
+
+correlation_matrix = df[df['species'] == 'setosa'].corr()
+sns.heatmap(correlation_matrix)
+plt.show()
+```
+
+![Seaborn heatmap example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-heatmap-example.png?raw=true)
+
 
 ## Preview Linear regressions
 
@@ -435,6 +489,7 @@ plt.show()
 ```
 
 ![Seaborn linear regression example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-linear-regression-example.png?raw=true)
+
 
 ### Linear regression setting ordrer
 

@@ -3,7 +3,7 @@ Full own memo about technics of machine learning with python
 
 ---
 
-### Topics
+## Machine learning
 
 1. Data loading
 2. Explore data
@@ -21,14 +21,24 @@ Full own memo about technics of machine learning with python
 
 ---
 
-### Tools
+## Deep learning neural networks
+
+1. Installing python packages
+
+---
+
+## Working with spark
+
+1. Loading data to spark cluster
+
+## Tools
 
 * Anaconda
     * Quick install Anaconda Ubuntu
 * Stand alone envs with docker
 
 ---
-### Usefull trics
+## Usefull trics
 
 * Data manipulation in Dataframes (cheat sheet)
 * Working with json and Dataframes

@@ -1,4 +1,4 @@
-# Data visualisation with panda
+# Data visualisation with panda, matplotlib and seaborn
 
 ## Histograms
 
@@ -711,6 +711,34 @@ plt.show()
 
 ![Color map example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/color-map-example.png?raw=true)
 
+## Time series visualisation
+
+### Simple preview of serie and filtering
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = sns.load_dataset('flights')
+df['date'] = pd.to_datetime(df['month'].astype(str) + '-' + df['year'].astype(str))
+df.set_index('date', inplace=True)
+
+plt.subplot(2,1,1)
+plt.plot(df['passengers'], color='green', label="Passengers")
+plt.xticks(rotation=45)
+plt.legend(loc='upper left')
+
+plt.subplot(2,1,2)
+plt.plot(df['passengers']['1958':'1958'], color='red', label="Passengers 1958")
+plt.xticks(rotation=45)
+plt.legend(loc='upper left')
+
+plt.tight_layout()
+
+plt.show()
+```
+![Time serie simple plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/time-serie-simple-plot-example.png?raw=true)
 
 ## Saving plot
 

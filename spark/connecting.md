@@ -8,7 +8,7 @@ from pyspark import SparkContext, SparkConf
 conf = SparkConf()
     .setMaster("local")
     .setAppName("My app")
-    .set("spark.executor.memory", "1g"))
+    .set("spark.executor.memory", "1g")
 
 sc = SparkContext(conf = conf)
 ```

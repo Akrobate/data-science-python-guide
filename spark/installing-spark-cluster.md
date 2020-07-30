@@ -16,10 +16,23 @@ cd spark-3.0.0-bin-hadoop2.7/
 ```
 
 ## Python libraries to work with spark cluster
+
+### Install with conda
+
 ```bash
 conda install -c conda-forge pyspark
 conda install -c conda-forge findspark
 ```
+
+If conda installation is problematic use pip instead
+
+### Install with pip
+
+```bash
+pip install pyspark
+pip install findspark
+```
+
 ## Docker-compose
 
 ```yaml

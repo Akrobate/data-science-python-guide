@@ -1,28 +1,40 @@
 # Connecting to a spark or spark cluster
 
-## Creating context
+## Connecting
 
-### With SparkContext method (old way)
+### SparkContext
+
 ```python
+import findspark
+findspark.init("/path/to/decompressed/spark-3.0.0-bin-hadoop3.2")
 from pyspark import SparkContext, SparkConf
 
 conf = SparkConf()
     .setMaster("local")
-    .setAppName("My app")
+    .setAppName("Test application")
     .set("spark.executor.memory", "1g")
 
-sc = SparkContext(conf = conf)
+spark_context = SparkContext(conf = conf)
+
+# disconnect app from cluster
+spark_context.stop()
 ```
 
 ### With SparkSession method current way
+
 ```python
+import findspark
+findspark.init("/path/to/decompressed/spark-3.0.0-bin-hadoop3.2")
 from pyspark import SparkContext, SparkConf
 
-spark = SparkSession.builder
+spark_session = SparkSession.builder
     .master("local")
-    .appName("Word Count")
+    .appName("Test application")
     .config("spark.some.config.option", "some-value")
     .getOrCreate()
+
+# disconnect app from cluster
+spark_session.stop()
 ```
 
 ### Possible master params
@@ -33,4 +45,10 @@ master = "spark://IP:PORT"
 
 # Local
 master = 'local'
+
+# Local with automatic cores
+master = 'local[*]'
+
+# Local with 4 cores
+master = 'local[4]'
 ```

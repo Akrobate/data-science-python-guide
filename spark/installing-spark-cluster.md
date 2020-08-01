@@ -5,8 +5,14 @@
 Choose the installation to download: https://spark.apache.org/downloads.html
 
 ```bash
+# Install JAVA
+sudo apt install openjdk-8-jre
+
+# Download spark
 wget http://apache.crihan.fr/dist/spark/spark-3.0.0/spark-3.0.0-bin-hadoop2.7.tgz
-tar -xzf spark-3.0.0-bin-hadoop2.7.tgz
+
+# Decompress spark
+tar -xf spark-3.0.0-bin-hadoop2.7.tgz
 cd spark-3.0.0-bin-hadoop2.7/
 ```
 
@@ -72,5 +78,4 @@ services:
       - SPARK_RPC_ENCRYPTION_ENABLED=no
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
-
 ```

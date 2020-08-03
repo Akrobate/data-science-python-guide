@@ -282,6 +282,22 @@ plt.show()
 
 ![Seaborn violin plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-violin-plot-example.png?raw=true)
 
+
+## Draw count plot
+
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.set(style="darkgrid")
+titanic = sns.load_dataset("titanic")
+ax = sns.countplot(x="class", hue="sex", data=titanic, palette="RdBu")
+plt.show()
+```
+
+![Seaborn countplot Titanic example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/seaborn-countplot-titanic-example.png?raw=true)
+
+
 ## Draw joint plot
 
 ```python

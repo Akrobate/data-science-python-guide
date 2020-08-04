@@ -34,3 +34,19 @@ plt.show()
 
 
 ![ml linear regression example.png](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/ml-linear-regression-example.png?raw=true)
+
+### Scoring linear regression
+
+#### R2 score
+```python
+linear_regression.score(X, y)
+```
+
+#### Root Mean Squarred Error
+```python
+from sklearn.metrics import mean_squared_error
+import numpy as np
+
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)
+```

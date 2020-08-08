@@ -106,13 +106,22 @@ y_test_predict = logisitic_regression.predict(X_test)
 
 ```
 
-## Scoring about model
+## Scoring
 
 ### Score the model
+
+Score method return the accuracy of the model, and is the average of F1 scores of each class of the model
 
 ```python
 logisitic_regression.score(X_test, y_test)
 ```
+
+**Returns**
+
+```python
+0.9666666666666667
+```
+
 
 ### Calculate the confustion matrix
 
@@ -120,10 +129,35 @@ logisitic_regression.score(X_test, y_test)
 confusion_matrix(y_test, y_test_predict)
 ```
 
+||predicted<br>setosa|predicted<br>versicolor|predicted<br>virginica|
+|-|-|-|-|
+|setosa|10|0|0|
+|versicolor|0|9|1|
+|virginica|0|0|10|
+
 ### Full classification repport
+
 ```python
 classification_report(y_test, y_test_predict)
 ```
+
+![ml classification report example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/ml-classification-report-example.png?raw=true)
+
+
+### Metrics
+
+#### Precision
+
+![{\color{Golden}Precision=\frac{TruePositive}{TruePositive+FalsePositive}}](https://latex.codecogs.com/svg.latex?\bg_white&space;\large&space;{\color{Golden}Precision=\frac{TruePositive}{TruePositive+FalsePositive}})
+
+#### Recall
+
+![{\color{Golden}Precision=\frac{TruePositive}{TruePositive+FalseNegative}}](https://latex.codecogs.com/svg.latex?\bg_white&space;\large&space;{\color{Golden}Precision=\frac{TruePositive}{TruePositive+FalseNegative}})
+
+#### F1 Score
+
+![{\color{Golden}F1Score=2\cdot\frac{precision\cdot recall}{precision+recall}}](https://latex.codecogs.com/svg.latex?\bg_white&space;\large&space;{\color{Golden}F1Score=2\cdot\frac{precision\cdot%20recall}{precision+recall}})
+
 
 # Scoring classifier
 

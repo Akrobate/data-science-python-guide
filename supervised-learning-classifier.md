@@ -159,5 +159,38 @@ classification_report(y_test, y_test_predict)
 ![{\color{Golden}F1Score=2\cdot\frac{precision\cdot recall}{precision+recall}}](https://latex.codecogs.com/svg.latex?\bg_white&space;\large&space;{\color{Golden}F1Score=2\cdot\frac{precision\cdot%20recall}{precision+recall}})
 
 
-# Scoring classifier
+#### ROC Curve (receiver operating characteristic)
 
+```python
+from sklearn import datasets
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split 
+from sklearn.metrics import roc_curve
+import matplotlib.pyplot as plt
+
+iris = datasets.load_iris()
+
+X = iris.data
+y = iris.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=123, stratify = y)
+
+logisitic_regression = LogisticRegression(max_iter = 200)
+logisitic_regression.fit(X_train, y_train)
+
+
+# Category to analyse
+category_index = 2
+y_pred_proba = logisitic_regression.predict_proba(X_test)[:, category_index]
+
+false_positive_rate, true_positive_rate, thresholds = roc_curve((y_test == category_index), y_pred_proba)
+
+plt.plot([0,1],[0,1], 'k--')
+plt.plot(false_positive_rate, true_positive_rate)
+plt.title("Roc curve " + iris.target_names[category_index] + " prediction")
+plt.xlabel('False positive rate')
+plt.ylabel('True positive rate')
+plt.show()
+```
+
+![ml Metric ROC Iris](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/ml-metric-roc-iris.png?raw=true)

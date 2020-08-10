@@ -194,3 +194,38 @@ plt.show()
 ```
 
 ![ml Metric ROC Iris](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/ml-metric-roc-iris.png?raw=true)
+
+
+#### ROC - AUC metric (Area Under the Curve)
+
+```python
+# ROC
+# Logistic Regression scorings
+
+from sklearn import datasets
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split 
+from sklearn.metrics import roc_auc_score
+import matplotlib.pyplot as plt
+
+iris = datasets.load_iris()
+
+X = iris.data
+y = iris.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=123, stratify = y)
+
+logisitic_regression = LogisticRegression(max_iter = 200)
+logisitic_regression.fit(X_train, y_train)
+
+# Category to analyse
+category_index = 2
+y_pred_proba = logisitic_regression.predict_proba(X_test)[:, category_index]
+roc_auc_score(y_test == category_index, y_pred_proba)
+```
+
+**Returns**
+
+```python
+0.995
+```

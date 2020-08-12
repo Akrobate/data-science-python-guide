@@ -79,3 +79,24 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
 ```
+
+## Stand alone docker
+
+### Env configuration for stand alone docker
+
+File: **env.list**
+```ini
+SPARK_MODE=worker
+SPARK_MASTER_URL=spark://192.168.1.47:7077
+SPARK_WORKER_MEMORY=1G
+SPARK_WORKER_CORES=1
+SPARK_RPC_AUTHENTICATION_ENABLED=no
+SPARK_RPC_ENCRYPTION_ENABLED=no
+SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+SPARK_SSL_ENABLED=no
+```
+
+### Command to launch
+```sh
+docker run bitnami/spark:3-debian-10 --env-file env.list
+```

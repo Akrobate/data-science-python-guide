@@ -23,5 +23,4 @@ grid_search_cv = GridSearchCV(
 grid_result = grid_search_cv.fit(X, y)
 
 print("Best: %f using %s" % (grid_result.best_score_, grid_result.best_params_))
-
 ```

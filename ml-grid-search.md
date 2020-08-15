@@ -5,6 +5,12 @@ Grid search is a technique for model optimization. With grid search technic you'
 ```python
 from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LogisticRegression
+from sklearn import datasets
+
+iris = datasets.load_iris()
+
+X = iris.data
+y = iris.target
 
 logistic_regression = LogisticRegression(penalty='l2')
 

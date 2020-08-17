@@ -12,7 +12,7 @@ conda create -n deeplearning python=3.6 anaconda
 conda activate deeplearning
 ```
 
-## Installing modules
+## Installing modules with conda
 
 ```bash
 conda install theano
@@ -23,6 +23,13 @@ conda install keras
 conda update --all
 ```
 
+## Installing modules with pip
+
+```bash
+pip install Theano
+pip install tensorflow
+pip install Keras
+```
 
 
 

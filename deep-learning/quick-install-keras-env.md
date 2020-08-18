@@ -26,9 +26,9 @@ conda update --all
 ## Installing modules with pip
 
 ```bash
-pip install Theano
+pip install theano
 pip install tensorflow
-pip install Keras
+pip install keras
 ```
 
 

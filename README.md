@@ -23,7 +23,7 @@ Full own memo about technics of machine learning with python
 
 ## Deep learning neural networks
 
-1. Installing python packages
+1. Quick install keras deep learning env
 
 ---
 

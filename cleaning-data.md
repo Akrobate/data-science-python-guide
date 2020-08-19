@@ -17,6 +17,47 @@ sepal_length_cm_mean = iris_df['sepal length (cm)'].mean()
 iris_df['sepal length (cm)'].fillna(sepal_length_cm_mean)
 ```
 
+### Fill na with SimpleImputer
+
+```python
+from sklearn import datasets
+from sklearn.impute import SimpleImputer
+import numpy as np
+
+iris = datasets.load_iris()
+X = iris.data
+
+imputer = SimpleImputer(missing_values=np.nan, strategy="mean")
+imputer.fit(X)
+
+prepared_data = imputer.transform([
+        [np.nan, 0, 0, 0],
+        [0, np.nan, 0, 0],
+        [0, 0, np.nan, 0],
+        [0, 0, 0, np.nan],
+])
+
+print(prepared_data)
+# Output
+# [[5.84333333 0.         0.         0.        ]
+# [0.         3.05733333 0.         0.        ]
+# [0.         0.         3.758      0.        ]
+# [0.         0.         0.         1.19933333]]
+
+
+print(X[:,0].mean())
+# Output 5.843333333333334
+
+print(X[:,1].mean())
+# Output 3.0573333333333337
+
+print(X[:,2].mean())
+# Output 3.7580000000000005
+
+print(X[:,3].mean())
+# Output 1.1993333333333336
+```
+
 ### Drop na values
 
 ```python

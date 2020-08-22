@@ -1,6 +1,6 @@
 # Data preparation for machine learning
 
-## Categorical Encoding data
+## Categorical to numeric encode data
 
 Encoding categorical data to numerical values
 
@@ -40,4 +40,37 @@ encoded_data = deck_le.fit_transform(titanic.deck.astype(str))
 
 encoded_data = deck_le.fit_transform(list(titanic.deck))
 # Will work, all NaN are converted to nan string in deck_le.classes_
+```
+
+## Categorical data to binary new columns encode
+
+```python
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.compose import ColumnTransformer
+import numpy as np
+
+data = np.array([["paris", 2], ["paris", 2], ["tokyo", 3], [np.nan, 0]])
+print(data)
+# [['paris' '2']
+#  ['paris' '2']
+#  ['tokyo' '3']
+#  ['nan' '0']]
+
+column_to_hot_encode = 0 # City name column
+column_transformer = ColumnTransformer(
+        [
+            (
+                "name_of_the_step",
+                OneHotEncoder(),
+                [column_to_hot_encode]
+            )
+        ],
+        remainder = 'passthrough'
+)
+data = column_transformer.fit_transform(data)
+print(data)
+# [['0.0' '1.0' '0.0' '2']
+#  ['0.0' '1.0' '0.0' '2']
+#  ['0.0' '0.0' '1.0' '3']
+#  ['1.0' '0.0' '0.0' '0']]
 ```

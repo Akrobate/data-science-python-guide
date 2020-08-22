@@ -74,3 +74,28 @@ print(data)
 #  ['0.0' '0.0' '1.0' '3']
 #  ['1.0' '0.0' '0.0' '0']]
 ```
+
+# Standardization of data
+
+The standardization method calculation
+
+standard_value = (value - average(column)) / standard_deviation(column)
+
+```python
+from sklearn.preprocessing import StandardScaler
+
+data = np.array(
+        [['0.0', '1.0', '0.0', '2'],
+         ['0.0', '1.0', '0.0', '2'],
+         ['0.0', '0.0', '1.0', '3'],
+         ['1.0', '0.0', '0.0', '0']]
+)
+
+standard_scaler = StandardScaler()
+data = standard_scaler.fit_transform(data.astype(np.float))
+print(data)
+# [[-0.57735027  1.         -0.57735027  0.22941573]
+#  [-0.57735027  1.         -0.57735027  0.22941573]
+#  [-0.57735027 -1.          1.73205081  1.14707867]
+#  [ 1.73205081 -1.         -0.57735027 -1.60591014]]
+```

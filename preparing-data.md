@@ -75,7 +75,7 @@ print(data)
 #  ['1.0' '0.0' '0.0' '0']]
 ```
 
-# Standardization of data
+## Standardization of data
 
 The standardization method calculation
 

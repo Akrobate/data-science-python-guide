@@ -1,5 +1,37 @@
 # Data preparation for machine learning
 
+## Test / Train split
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn import datasets
+
+boston = datasets.load_boston()
+
+X = boston.data
+y = boston.target
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, shuffle = True)
+
+print(X.shape)
+# (506, 13)
+
+print(X_train.shape)
+# (354, 13)
+
+print(X_test.shape)
+# (152, 13)
+
+print(y.shape)
+# (506,)
+
+print(y_train.shape)
+# (354,)
+
+print(y_test.shape)
+# (152,)
+```
+
 ## Categorical to numeric encode data
 
 Encoding categorical data to numerical values

@@ -19,7 +19,7 @@ pipeline = Pipeline([
 ])
 
 pipeline.fit(X_train, y_train)
-pipe.score(X_test, y_test)
+pipeline.score(X_test, y_test)
 ```
 
 ## Pipeline and grid search

@@ -40,3 +40,29 @@ print(my_dictionnary['test'])
 my_json_string = json.dumps(my_dictionnary)
 print(my_json_string)
 # will return something like json_string
+```
+
+## Generating range Arrays
+
+```python
+# integers ranges
+list(range(1, 10, 2))
+# [1, 3, 5, 7, 9]
+
+import numpy as np
+
+# float ranges
+np.arange(1, 2, 0.1)
+# array([1. , 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9])
+
+# float ranges, with number of wanted values
+np.linspace(1, 2, 10, endpoint = False)
+# array([1. , 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9])
+
+# float ranges, with number of wanted values
+np.linspace(1, 2, 10, endpoint = True)
+# array([1.        , 1.11111111, 1.22222222, 1.33333333, 1.44444444,
+#       1.55555556, 1.66666667, 1.77777778, 1.88888889, 2.        ])
+```
+
+

@@ -24,6 +24,16 @@ Each dataset is composed of following fields:
 * filename
 
 
+## Working with seaborn example datasets
+
+Be aware that seaborn loader will load csv files online, so you need to be connected to load data. Save the dataset as CSV to use it locally
+
+```python
+from seaborn import load_dataset
+titanic = load_dataset("titanic")
+```
+
+
 ## Working with json
 
 ```python

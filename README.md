@@ -41,5 +41,7 @@ Full own memo about technics of machine learning with python
 ## Usefull trics
 
 * Data manipulation in Dataframes (cheat sheet)
+* Loading tests datasets (iris, titanic, ...)
 * Working with json and Dataframes
+* Generating data arrays (linspace, range, arange)
 

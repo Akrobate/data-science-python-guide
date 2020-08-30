@@ -15,3 +15,17 @@ tfidf_vectorizer = TfidfVectorizer(
 
 vecotrized_texts = tfidf_vectorizer.fit_transform(source_dataframe['text_column'])
 ```
+
+
+## Langage detecting with langdetect package
+
+```python
+from langdetect import detect
+
+text = "Bonjour le monde"
+
+if (detect(text) == 'fr'):
+    print("text is french")
+else:
+    print("text is not in french")
+```

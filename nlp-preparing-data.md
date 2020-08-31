@@ -29,3 +29,22 @@ if (detect(text) == 'fr'):
 else:
     print("text is not in french")
 ```
+
+## Lambda function to normalize text
+
+```python
+import re
+import pandas as pd
+
+''' Example of simple function to normalize text '''
+def pre_process_text(text):
+    # lowercase
+    text = text.lower()
+    #remove tags
+    text = re.sub("&lt;/?.*?&gt;"," &lt;&gt; ", text)
+    # remove special characters and digits
+    text = re.sub("(\\d|\\W)+"," ",text)
+    return text
+
+dataframe['text_column'] = dataframe['text_column'].apply(lambda value:pre_process_text(value))
+```

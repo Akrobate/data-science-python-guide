@@ -81,3 +81,8 @@ def pre_process_text(text):
 
 dataframe['text_column'] = dataframe['text_column'].apply(lambda value:pre_process_text(value))
 ```
+
+## Lementize function
+
+## Stemming function
+

@@ -82,7 +82,22 @@ def pre_process_text(text):
 dataframe['text_column'] = dataframe['text_column'].apply(lambda value:pre_process_text(value))
 ```
 
-## Lementize function
+## Lemmantize function
+
+Lemmantize using spacy module. Be aware that you have to download the langague core that you need. Here "fr_core_news_md" whas downloaded
+
+```python
+import spacy
+nlp = spacy.load('fr_core_news_md')
+
+def lemmantize(text):
+    result = []
+    for token in nlp(text):
+        result.append(token.lemma_)
+    return ' '.join(result)
+
+dataframe['text_column'] = dataframe['text_column'].apply(lambda value:lemmantize(value))
+```
 
 ## Stemming function
 

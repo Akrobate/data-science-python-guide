@@ -30,6 +30,22 @@ datetime_string = "21 May, 1985"
 date_time = datetime.strptime(date_string, "%d %B, %Y")
 ```
 
+Get a datetime from string automaticly
+
+```python
+from dateutil import parser
+datetime_string = "21 May, 1985"
+date_time = parser.parse(date_string)
+```
+
+## Panda transform string to Timestamp object
+
+```python
+import pandas as pd
+datetime_string = "21 May, 1985"
+date = pd.to_datetime(datetime_string)
+```
+
 ## Panda Time Serie indexed by time
 
 ```python

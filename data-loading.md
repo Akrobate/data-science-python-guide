@@ -73,3 +73,15 @@ my_dataframe.to_csv(
 )
 ```
 
+Append to file. Output without headers.
+
+```python
+import pandas as pd
+
+my_dataframe.to_csv(
+    './my_file.csv',
+    index=False,         # Do not export index
+    mode='a',
+    header=False
+)
+```

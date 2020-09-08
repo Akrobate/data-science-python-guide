@@ -1,4 +1,4 @@
-# Data manipulation: Time series
+# Data manipulation - Time series
 
 ## Python datetime
 
@@ -49,7 +49,23 @@ date = pd.to_datetime(datetime_string)
 ## Panda Time Serie indexed by time
 
 ```python
+import pandas as pd
 index = pd.DatetimeIndex(['2013-05-01', '2014-05-01', '2015-07-04', '2016-05-01'])
 data = pd.Series([0, 1, 2, 3], index=index)
 ```
 
+## Panda generate range of dates
+
+```python
+import pandas as pd
+data = pd.date_range('1998-03-10', '1998-03-15', freq='D')
+```
+Possible frequencies:
+
+* 'H' - hourly
+* 'D' - Daily
+* 'B' - Buisiness daily
+* 'W' - Weekly
+* 'M' - Monthly
+* 'Q' - Quarterly
+* 'A' - Annual

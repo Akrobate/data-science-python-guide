@@ -78,3 +78,14 @@ Possible frequencies:
 * 'M' - Monthly
 * 'Q' - Quarterly
 * 'A' - Annual
+
+## Panda filter dataframe by indexed date range
+
+```python
+import pandas as pd
+
+# my_dataframe an index of datetime type
+
+# select all data that match year: 2020
+df_2020 = my_dataframe['2020':'2020']
+```

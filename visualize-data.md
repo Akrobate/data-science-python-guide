@@ -754,6 +754,7 @@ plt.tight_layout()
 
 plt.show()
 ```
+
 ![Time serie simple plot example](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/time-serie-simple-plot-example.png?raw=true)
 
 ## Saving plot

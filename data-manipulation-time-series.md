@@ -54,6 +54,15 @@ index = pd.DatetimeIndex(['2013-05-01', '2014-05-01', '2015-07-04', '2016-05-01'
 data = pd.Series([0, 1, 2, 3], index=index)
 ```
 
+### Using existing column to define as time index
+```python
+import pandas as pd
+
+# my_dataframe have a colum date with string date value inside
+my_dataframe['date'] = pd.to_datetime(my_dataframe['date'])
+my_dataframe.set_index('date', inplace=True)
+```
+
 ## Panda generate range of dates
 
 ```python

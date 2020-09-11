@@ -89,3 +89,12 @@ import pandas as pd
 # select all data that match year: 2020
 df_2020 = my_dataframe['2020':'2020']
 ```
+
+## Pandas resample time data
+
+```python
+import pandas as pd
+my_dataframe = my_dataframe.set_index('datetime_column')
+
+my_dataframe = my_dataframe.datetime_column.resample('D').count() 
+```

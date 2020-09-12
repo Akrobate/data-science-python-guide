@@ -107,5 +107,18 @@ my_dataframe = my_dataframe.datetime_column.resample('D').count()
 import pandas as pd
 my_dataframe = my_dataframe.set_index('datetime_column')
 
-my_dataframe = my_dataframe.datetime_column.resample('D').count() 
+summed_serie = my_dataframe.serie_to_sum.resample('D').sum() 
 ```
+
+### Resample with cutom method
+
+```python
+import pandas as pd
+my_dataframe = my_dataframe.set_index('datetime_column')
+
+def custom_sum(array_like):
+    return np.sum(array_like)
+
+summed_serie = my_dataframe.serie_to_sum.resample('D').apply(custom_sum)
+```
+

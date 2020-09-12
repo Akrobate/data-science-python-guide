@@ -92,6 +92,17 @@ df_2020 = my_dataframe['2020':'2020']
 
 ## Pandas resample time data
 
+### Resample and count lines
+
+```python
+import pandas as pd
+my_dataframe = my_dataframe.set_index('datetime_column')
+
+my_dataframe = my_dataframe.datetime_column.resample('D').count() 
+```
+
+### Resample and sum values
+
 ```python
 import pandas as pd
 my_dataframe = my_dataframe.set_index('datetime_column')

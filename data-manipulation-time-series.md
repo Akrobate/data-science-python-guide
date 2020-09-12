@@ -26,7 +26,7 @@ Get a datetime from string
 
 ```python
 from datetime import datetime
-datetime_string = "21 May, 1985"
+date_string = "21 May, 1985"
 date_time = datetime.strptime(date_string, "%d %B, %Y")
 ```
 
@@ -34,7 +34,7 @@ Get a datetime from string automaticly
 
 ```python
 from dateutil import parser
-datetime_string = "21 May, 1985"
+date_string = "21 May, 1985"
 date_time = parser.parse(date_string)
 ```
 

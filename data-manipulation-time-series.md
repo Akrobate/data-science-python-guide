@@ -112,6 +112,12 @@ my_dataframe = my_dataframe.set_index('datetime_column')
 summed_serie = my_dataframe.serie_to_sum.resample('D').sum() 
 ```
 
+### Othe possible method on resampled data
+
+* resample('D').mean()
+* resample('D').first()
+* resample('D').last()
+
 ### Resample with cutom method
 
 ```python

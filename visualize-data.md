@@ -15,7 +15,7 @@ iris_df = pd.DataFrame(iris.data, columns = iris.feature_names)
 iris_df['sepal length (cm)'].hist(bins=20)
 ```
 
-![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-pandas-hist-20-bins.png?raw=true)
+![Map france Nasa night](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/map-france-night-nasa.png?raw=true)
 
 
 ### Using matplotlib to draw historgram

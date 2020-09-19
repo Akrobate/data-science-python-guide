@@ -23,6 +23,9 @@ ax.set_title('France map night April/October 2012')
 plt.show()
 ```
 
+![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-pandas-hist-20-bins.png?raw=true)
+
+
 ### Stamen France map view
 
 ```python

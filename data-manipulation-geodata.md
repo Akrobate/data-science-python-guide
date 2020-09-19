@@ -23,7 +23,7 @@ ax.set_title('France map night April/October 2012')
 plt.show()
 ```
 
-![Iris sepal length hist](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/iris-sepal-length-pandas-hist-20-bins.png?raw=true)
+![Map France nasa night](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/map-france-night-nasa.png?raw=true)
 
 
 ### Stamen France map view
@@ -53,3 +53,5 @@ plt.plot(2.21, 48.85,  markersize=10, marker='o', color='red', transform=ccrs.Ge
 
 plt.show()
 ```
+
+![Map France Stamen](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/map-france-stamen-data.png?raw=true)

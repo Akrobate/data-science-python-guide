@@ -11,6 +11,9 @@ Full own memo about technics of machine learning with python
     2. Visualize data
 3. Cleaning data
 4. Data manipulation
+    1. General data manipulation
+    2. Time series data manipulation
+    3. Geographical data manipulation
 5. Machine learning
     1. Overview
     2. Classification

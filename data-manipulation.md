@@ -33,6 +33,42 @@ cols_concatenated_df = pd.concat(
 )
 ```
 
+## Concat dataframe rows of splitted column value
+
+Lets supose we have some values in json string format in one of fields of our dataframe. We want to get this data in its own column, with each value in it own row
+
+```python
+import pandas as pd
+import json
+
+example_data = [
+    {
+        'column1': 1,
+        'column2':'{"id_list":[1,2,3]}'
+    },
+    {
+        'column1': 2,
+        'column2':'{"id_list":[1,2,3]}'
+    },
+]
+
+input_data = pd.DataFrame(example_data)
+
+result = pd.DataFrame()
+
+for _, data in input_data.iterrows():
+    column_json_decoded = json.loads(data['column2'])
+    if 'id_list' in column_json_decoded:
+        id_series = pd.Series(column_json_decoded['id_list'])
+        temporary_dataframe = pd.DataFrame()
+        temporary_dataframe['column2_id'] = id_series
+        temporary_dataframe['column1'] = data['column1']
+        result = result.append(temporary_dataframe)
+
+print(result.head())
+print(result.info())
+```
+
 ## Melt / Pivot data
 
 ### Melt dataframe

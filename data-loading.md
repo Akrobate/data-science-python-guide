@@ -59,6 +59,7 @@ my_dataframe = pd.read_csv(
     parse_dates = ['col_b'],      # Optionnal Intepret col_b as a date
     skiprows = 10,                # Optionnal Skip the first 10 rows
     na_values = ['.', '??']       # Optionnal Any '.' or '??' values as NA
+    encoding = "ISO-8859-1"       # Optionnal charset of the file
 )
 ```
 

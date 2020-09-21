@@ -178,3 +178,11 @@ result = df.sort_values('my_col_a', ascending = True)
 # sorting by multiple values
 result = df.sort_values(['my_col_a', 'my_col_b'], ascending=[1, 0])
 ```
+
+## Grouping data
+
+### Grouping counting rows
+
+```python
+grouped_data = df.groupby(['column_name_to_group_by']).size().reset_index(name='counts')
+```

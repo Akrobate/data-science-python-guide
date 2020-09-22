@@ -55,11 +55,15 @@ data = pd.Series([0, 1, 2, 3], index=index)
 ```
 
 ### Using existing column to define as time index
+
+Important: To prevent errors while converting to datetime use errors parameter
+For instance errors='coerce' will put NaT values in invalid values
+
 ```python
 import pandas as pd
 
 # my_dataframe have a colum date with string date value inside
-my_dataframe['date'] = pd.to_datetime(my_dataframe['date'])
+my_dataframe['date'] = pd.to_datetime(my_dataframe['date'], errors='coerce')
 my_dataframe.set_index('date', inplace=True)
 ```
 
@@ -89,7 +93,7 @@ import pandas as pd
 # my_dataframe an index of datetime type
 
 # select all data that match year: 2020
-df_2020 = my_dataframe['2020':'2020']
+df_2020 = my_dataframe.loc['2020':'2020']
 ```
 
 ## Pandas resample time data

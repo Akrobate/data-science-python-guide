@@ -171,12 +171,24 @@ df.my_col = pd.to_numeric(df['my_col'], errors='coerce')
 
 ## Sorting panda dataframe
 
+### Sorting on value of specific column(s)
+
 ```python
 # sorting with a single value
 result = df.sort_values('my_col_a', ascending = True)
 
 # sorting by multiple values
 result = df.sort_values(['my_col_a', 'my_col_b'], ascending=[1, 0])
+```
+
+### Sorting on index
+
+```python
+# sorting rows on index
+result = df.sort_index(axis = 0, ascending = True)
+
+# Interesting trick sort_index with axis to 1 will sort columns names in dataframe
+result = df.sort_index(axis = 1, ascending = True)
 ```
 
 ## Grouping data

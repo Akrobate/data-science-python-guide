@@ -1,5 +1,23 @@
 # Data manipulation
 
+- [Data manipulation](#data-manipulation)
+  * [Join data](#join-data)
+  * [Concat dataframe rows / cols](#concat-dataframe-rows-/-cols)
+  * [Concat dataframe rows of splitted column value](#concat-dataframe-rows-of-splitted-column-value)
+  * [Melt / Pivot data](#melt-/-pivot-data)
+    + [Melt dataframe](#melt-dataframe)
+    + [Pivot dataframe](#pivot-dataframe)
+  * [Managing indexes](#managing-indexes)
+  * [Manipulating columns as string](#manipulating-columns-as-string)
+  * [Changing columns types](#changing-columns-types)
+    + [Object to categorical](#object-to-categorical)
+    + [Object to numeric type](#object-to-numeric-type)
+  * [Sorting panda dataframe](#sorting-panda-dataframe)
+    + [Sorting on columns values](sorting-on-columns-values)
+    + [Sorting on index](#sorting-on-index)
+  * [Grouping data](#grouping-data)
+    + [Grouping counting rows](#grouping-counting-rows)
+
 ## Join data
 
 Example of making a merge with a left join very similar to mysql left join style
@@ -171,7 +189,7 @@ df.my_col = pd.to_numeric(df['my_col'], errors='coerce')
 
 ## Sorting panda dataframe
 
-### Sorting on value of specific column(s)
+### Sorting on columns values
 
 ```python
 # sorting with a single value

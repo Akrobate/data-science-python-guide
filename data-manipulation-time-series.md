@@ -1,5 +1,19 @@
 # Data manipulation - Time series
 
+- [Data manipulation - Time series](#data-manipulation---time-series)
+  * [Python datetime](#python-datetime)
+  * [Panda transform string to Timestamp object](#panda-transform-string-to-timestamp-object)
+  * [Panda Time Serie indexed by time](#panda-time-serie-indexed-by-time)
+    + [Using existing column to define as time index](#using-existing-column-to-define-as-time-index)
+  * [Panda generate range of dates](#panda-generate-range-of-dates)
+  * [Panda filter dataframe by indexed date range](#panda-filter-dataframe-by-indexed-date-range)
+  * [Pandas resample time data](#pandas-resample-time-data)
+    + [Resample and count lines](#resample-and-count-lines)
+    + [Resample and sum values](#resample-and-sum-values)
+    + [Othe possible method on resampled data](#othe-possible-method-on-resampled-data)
+    + [Resample with cutom method](#resample-with-cutom-method)
+- [Possible frequencies:](#possible-frequencies-)
+
 ## Python datetime
 
 Print current datetime

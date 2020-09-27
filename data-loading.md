@@ -1,5 +1,14 @@
 # Data loading
 
+- [Data loading](#data-loading)
+  * [Directly from python data structures](#directly-from-python-data-structures)
+    + [Creating a dataframe directly from list of dicts](#creating-a-dataframe-directly-from-list-of-dicts)
+  * [Mysql](#mysql)
+  * [Load from CSV](#load-from-csv)
+    + [Simple unitary loading](#simple-unitary-loading)
+    + [Loading multiple csv files](#loading-multiple-csv-files)
+  * [Save to CSV](#save-to-csv)
+
 In this section we are going to overview ways to quick load data, save data, connect to a MySql database in order to load it in a panda dataframe
 
 ## Directly from python data structures

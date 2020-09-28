@@ -1,5 +1,16 @@
 # Cleaning data
 
+- [Cleaning data](#cleaning-data)
+  * [Dealing with NaN values](#dealing-with-nan-values)
+    + [Fill na with mean serie values](#fill-na-with-mean-serie-values)
+    + [Fill na with SimpleImputer](#fill-na-with-simpleimputer)
+    + [Drop na values](#drop-na-values)
+  * [Dealing with Duplicate](#dealing-with-duplicate)
+    + [Drop duplicates on a Serie](#drop-duplicates-on-a-serie)
+    + [Drop duplicates on a Dataframe](#drop-duplicates-on-a-dataframe)
+  * [Checking by Asserting null data](#checking-by-asserting-null-data)
+  * [Checking by Asserting types](#checking-by-asserting-types)
+
 ## Dealing with NaN values
 
 ### Fill na with mean serie values

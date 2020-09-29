@@ -1,5 +1,9 @@
 # Data exploration
 
+- [Data exploration](#data-exploration)
+  * [Fundamentals](#fundamentals)
+  * [Data exploring](#data-exploring)
+
 ## Fundamentals
 
 ```python

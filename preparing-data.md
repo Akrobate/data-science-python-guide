@@ -1,5 +1,11 @@
 # Data preparation for machine learning
 
+- [Data preparation for machine learning](#data-preparation-for-machine-learning)
+  * [Test / Train split](#test---train-split)
+  * [Categorical to numeric encode data](#categorical-to-numeric-encode-data)
+  * [Categorical data to binary new columns encode](#categorical-data-to-binary-new-columns-encode)
+  * [Standardization of data](#standardization-of-data)
+
 ## Test / Train split
 
 ```python

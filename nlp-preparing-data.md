@@ -1,5 +1,13 @@
 # Natural langague processing - Preparing data
 
+- [Natural langague processing - Preparing data](#natural-langague-processing---preparing-data)
+  * [TfIdfVectorizer](#tfidfvectorizer)
+  * [MNF Topics generation](#mnf-topics-generation)
+  * [Langage detecting with langdetect package](#langage-detecting-with-langdetect-package)
+  * [Lambda function to normalize text](#lambda-function-to-normalize-text)
+  * [Lemmantize function](#lemmantize-function)
+  * [Stemming function](#stemming-function)
+
 ## TfIdfVectorizer
 
 ```python

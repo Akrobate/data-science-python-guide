@@ -1,5 +1,11 @@
 # Quick install Anaconda on Ubuntu
 
+- [Quick install Anaconda on Ubuntu](#quick-install-anaconda-on-ubuntu)
+  * [Download Anaconda and install](#download-anaconda-and-install)
+    + [Desactivate default base env](#desactivate-default-base-env)
+  * [Using Anaconda navigator](#using-anaconda-navigator)
+  * [Add desktop icons for Anaconda](#add-desktop-icons-for-anaconda)
+
 * ubuntu 18.04.04 LTS
 * Anaconda
 

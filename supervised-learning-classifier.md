@@ -1,5 +1,20 @@
 # Classifier
 
+- [Classifier](#classifier)
+  * [KNN](#knn)
+    + [Overfitting / Underfitting curve](#overfitting---underfitting-curve)
+- [Logistic Regression](#logistic-regression)
+  * [Scoring](#scoring)
+    + [Score the model](#score-the-model)
+    + [Calculate the confustion matrix](#calculate-the-confustion-matrix)
+    + [Full classification repport](#full-classification-repport)
+    + [Metrics](#metrics)
+      - [Precision](#precision)
+      - [Recall](#recall)
+      - [F1 Score](#f1-score)
+      - [ROC Curve (receiver operating characteristic)](#roc-curve--receiver-operating-characteristic-)
+      - [ROC - AUC metric (Area Under the Curve)](#roc---auc-metric--area-under-the-curve-)
+
 ## KNN
 
 ```python

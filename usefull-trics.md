@@ -1,5 +1,10 @@
 # Usefull tricks
 
+- [Usefull tricks](#usefull-tricks)
+  * [Working with sklearn example datasets](#working-with-sklearn-example-datasets)
+  * [Working with seaborn example datasets](#working-with-seaborn-example-datasets)
+  * [Working with json](#working-with-json)
+  * [Generating range Arrays](#generating-range-arrays)
 
 ## Working with sklearn example datasets
 

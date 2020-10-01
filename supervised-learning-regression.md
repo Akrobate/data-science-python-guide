@@ -1,5 +1,14 @@
 # Regression
 
+- [Regression](#regression)
+  * [Simple linear regression](#simple-linear-regression)
+    + [Scoring linear regression](#scoring-linear-regression)
+      - [R2 score](#r2-score)
+      - [Root Mean Squarred Error](#root-mean-squarred-error)
+  * [Ridge](#ridge)
+  * [Lasso](#lasso)
+    + [Lasso feature selection](#lasso-feature-selection)
+
 ## Simple linear regression
 
 ```python

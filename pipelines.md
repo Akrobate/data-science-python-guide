@@ -1,5 +1,9 @@
 # Pipelines
 
+- [Pipelines](#pipelines)
+  * [Simple example of a pipeline](#simple-example-of-a-pipeline)
+  * [Pipeline and grid search](#pipeline-and-grid-search)
+
 ## Simple example of a pipeline
 
 ```python

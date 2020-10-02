@@ -1,5 +1,8 @@
 # K Fold cross-validation
 
+- [K Fold cross-validation](#k-fold-cross-validation)
+  * [Example of K fold cross validation](#example-of-k-fold-cross-validation)
+
 Cross validation is a method to split randomly data in test / train folds and then to test each possible combination between test / train folds. This way we are sure that we have better estimation on the trained model.
 
 ## Example of K fold cross validation

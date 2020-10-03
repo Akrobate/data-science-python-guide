@@ -1,5 +1,10 @@
 # Installing Keras Deep learning env
 
+- [Installing Keras Deep learning env](#installing-keras-deep-learning-env)
+  * [Creating specific conda env (optional)](#creating-specific-conda-env--optional-)
+  * [Installing modules with conda](#installing-modules-with-conda)
+  * [Installing modules with pip](#installing-modules-with-pip)
+
 ## Creating specific conda env (optional)
 
 If you are using anaconda with conda package and env manager you can start by creating the dedicated environment.

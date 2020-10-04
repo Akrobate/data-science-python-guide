@@ -1,5 +1,13 @@
 # Connecting to a spark or spark cluster
 
+- [Connecting to a spark or spark cluster](#connecting-to-a-spark-or-spark-cluster)
+  * [Connecting](#connecting)
+    + [SparkContext](#sparkcontext)
+    + [SparkSession](#sparksession)
+    + [SparkSession from SparkContext](#sparksession-from-sparkcontext)
+    + [Parameters to set](#parameters-to-set)
+    + [Possible master params](#possible-master-params)
+
 ## Connecting
 
 ### SparkContext

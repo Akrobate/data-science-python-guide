@@ -1,5 +1,15 @@
 # Installing spark environment
 
+- [Installing spark environment](#installing-spark-environment)
+  * [Local spark installation](#local-spark-installation)
+  * [Python libraries to work with spark cluster](#python-libraries-to-work-with-spark-cluster)
+    + [Install with conda](#install-with-conda)
+    + [Install with pip](#install-with-pip)
+  * [Docker-compose](#docker-compose)
+  * [Stand alone docker](#stand-alone-docker)
+    + [Env configuration for stand alone docker](#env-configuration-for-stand-alone-docker)
+    + [Command to launch](#command-to-launch)
+
 ## Local spark installation
 
 Choose the installation to download: https://spark.apache.org/downloads.html

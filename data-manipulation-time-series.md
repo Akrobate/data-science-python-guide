@@ -5,6 +5,7 @@
   * [Panda transform string to Timestamp object](#panda-transform-string-to-timestamp-object)
   * [Panda Time Serie indexed by time](#panda-time-serie-indexed-by-time)
     + [Using existing column to define as time index](#using-existing-column-to-define-as-time-index)
+  * [Format time index or datetime column to string](#format-time-index-or-datetime-column-to-string)
   * [Panda generate range of dates](#panda-generate-range-of-dates)
   * [Panda filter dataframe by indexed date range](#panda-filter-dataframe-by-indexed-date-range)
   * [Pandas resample time data](#pandas-resample-time-data)
@@ -81,6 +82,27 @@ my_dataframe['date'] = pd.to_datetime(my_dataframe['date'], errors='coerce')
 my_dataframe.set_index('date', inplace=True)
 ```
 
+## Format time index or datetime column to string
+
+Process on index
+
+```python
+import pandas as pd
+df = pd.DataFrame({ 'date_column': ['2013-05-01', '2014-05-01', '2015-07-04', '2016-05-01'] })
+df.date_column = pd.to_datetime(df.date_column)
+df.set_index('date_column', inplace=True)
+df['date_year_string'] = df.index.strftime('%Y')
+```
+
+Process on a column
+
+```python
+import pandas as pd
+df = pd.DataFrame({ 'date_column': ['2013-05-01', '2014-05-01', '2015-07-04', '2016-05-01'] })
+df.date_column = pd.to_datetime(df.date_column)
+df['date_year_string'] = df.date_column.dt.strftime('%Y')
+```
+
 ## Panda generate range of dates
 
 ```python
@@ -118,7 +140,7 @@ df_2020 = my_dataframe.loc['2020':'2020']
 import pandas as pd
 my_dataframe = my_dataframe.set_index('datetime_column')
 
-my_dataframe = my_dataframe.datetime_column.resample('D').count() 
+my_dataframe = my_dataframe.resample('D').count() 
 ```
 
 ### Resample and sum values

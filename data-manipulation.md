@@ -9,6 +9,7 @@
     + [Pivot dataframe](#pivot-dataframe)
   * [Managing indexes](#managing-indexes)
   * [Manipulating columns as string](#manipulating-columns-as-string)
+  * [Rename columns names](#rename-columns-names)
   * [Changing columns types](#changing-columns-types)
     + [Object to categorical](#object-to-categorical)
     + [Object to numeric type](#object-to-numeric-type)
@@ -165,6 +166,22 @@ df['split'] = df.species.str.split('o')
 df['split_first_part'] = df['split'].str.get(0)
 df['split_second_part'] = df['split'].str.get(1)
 
+```
+
+## Rename columns names
+
+```Python
+import numpy as np
+import pandas as pd
+from sklearn.datasets import load_iris
+
+iris = load_iris()
+df = pd.DataFrame(
+    data = np.c_[iris.data, iris.target],
+    columns= iris.feature_names + ['target']
+)
+
+df.rename(columns = { 'target':'specie_name' }, inplace = True)
 ```
 
 ## Changing columns types

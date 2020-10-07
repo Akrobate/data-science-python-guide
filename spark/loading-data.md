@@ -1,5 +1,9 @@
 # Loading data to spark cluster
 
+- [Loading data to spark cluster](#loading-data-to-spark-cluster)
+  * [Loading using panda dataframe](#loading-using-panda-dataframe)
+  * [Loading csv data directly with Spark](#loading-csv-data-directly-with-spark)
+
 ## Loading using panda dataframe
 
 ```python

@@ -183,7 +183,17 @@ plt.show()
 ```
 ![2D graph contour](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/2D-graph-contour.png?raw=true)
 
+## Simple bars chart graph
 
+```python
+import matplotlib.pyplot as plt
+values = [12, 5, 56, 89, 88]
+labels = ['a', 'b', 'c', 'd', 'e']
+plt.bar(range(len(values)), values, tick_label = labels)
+plt.show()
+```
+
+![Simple bars chart graph](https://github.com/Akrobate/data-science-python-guide/blob/master/assets/images/simple-bar-chart-graph.png?raw=true)
 
 ## Box plots
 

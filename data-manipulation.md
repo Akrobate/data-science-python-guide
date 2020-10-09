@@ -2,9 +2,9 @@
 
 - [Data manipulation](#data-manipulation)
   * [Join data](#join-data)
-  * [Concat dataframe rows / cols](#concat-dataframe-rows-/-cols)
+  * [Concat dataframe rows / cols](#concat-dataframe-rows---cols)
   * [Concat dataframe rows of splitted column value](#concat-dataframe-rows-of-splitted-column-value)
-  * [Melt / Pivot data](#melt-/-pivot-data)
+  * [Melt / Pivot data](#melt---pivot-data)
     + [Melt dataframe](#melt-dataframe)
     + [Pivot dataframe](#pivot-dataframe)
   * [Managing indexes](#managing-indexes)
@@ -14,10 +14,14 @@
     + [Object to categorical](#object-to-categorical)
     + [Object to numeric type](#object-to-numeric-type)
   * [Sorting panda dataframe](#sorting-panda-dataframe)
-    + [Sorting on columns values](sorting-on-columns-values)
+    + [Sorting on columns values](#sorting-on-columns-values)
     + [Sorting on index](#sorting-on-index)
   * [Grouping data](#grouping-data)
     + [Grouping counting rows](#grouping-counting-rows)
+  * [Removing data from dataframe](#removing-data-from-dataframe)
+    + [Remove a row by index value](#remove-a-row-by-index-value)
+    + [Remove a row by row number](#remove-a-row-by-row-number)
+    + [Remove a column](#remove-a-column)
 
 ## Join data
 
@@ -232,4 +236,40 @@ result = df.sort_index(axis = 1, ascending = True)
 
 ```python
 grouped_data = df.groupby(['column_name_to_group_by']).size().reset_index(name='counts')
+```
+
+## Removing data from dataframe
+
+### Remove a row by index value
+
+```python
+import pandas as pd
+data = {'col_1': ['A', 'B', 'C'], 
+        'col_2': [1, 2, 3]}
+df = pd.DataFrame(data, index = ['index_a', 'index_b', 'index_c'])
+
+df.drop(['index_a', 'index_b'])
+```
+
+### Remove a row by row number
+
+```python
+import pandas as pd
+data = {'col_1': ['A', 'B', 'C'], 
+        'col_2': [1, 2, 3]}
+df = pd.DataFrame(data, index = ['index_a', 'index_b', 'index_c'])
+
+# Will remove first row
+df.drop(df.index[0])
+```
+
+### Remove a column
+
+```python
+import pandas as pd
+data = {'col_1': ['A', 'B', 'C'], 
+        'col_2': [1, 2, 3]}
+df = pd.DataFrame(data, index = ['index_a', 'index_b', 'index_c'])
+
+df.drop('col_2', axis=1)
 ```

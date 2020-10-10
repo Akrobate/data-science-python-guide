@@ -58,7 +58,23 @@ cols_concatenated_df = pd.concat(
 
 ## Append data to dataframe
 
+```python
+import pandas as pd
 
+example_data = {
+    'column1': [1,2],
+    'column2': ['A', 'B']
+}
+
+example_row_to_append = {
+    'column1': [3],
+    'column2': ['C']
+}
+
+dataframe = pd.DataFrame(example_data)
+appendeted_dataframe = dataframe.append(pd.DataFrame(example_row_to_append), ignore_index=True)
+appendeted_dataframe
+```
 
 ## Concat dataframe rows of splitted column value
 

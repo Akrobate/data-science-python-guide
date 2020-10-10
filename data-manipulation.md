@@ -56,6 +56,10 @@ cols_concatenated_df = pd.concat(
 )
 ```
 
+## Append data to dataframe
+
+
+
 ## Concat dataframe rows of splitted column value
 
 Lets supose we have some values in json string format in one of fields of our dataframe. We want to get this data in its own column, with each value in it own row
@@ -86,7 +90,7 @@ for _, data in input_data.iterrows():
         temporary_dataframe = pd.DataFrame()
         temporary_dataframe['column2_id'] = id_series
         temporary_dataframe['column1'] = data['column1']
-        result = result.append(temporary_dataframe)
+        result = result.append(temporary_dataframe, ignore_index=True)
 
 print(result.head())
 print(result.info())

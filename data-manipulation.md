@@ -3,6 +3,7 @@
 - [Data manipulation](#data-manipulation)
   * [Join data](#join-data)
   * [Concat dataframe rows / cols](#concat-dataframe-rows---cols)
+  * [Append data to dataframe](#append-data-to-dataframe)
   * [Concat dataframe rows of splitted column value](#concat-dataframe-rows-of-splitted-column-value)
   * [Melt / Pivot data](#melt---pivot-data)
     + [Melt dataframe](#melt-dataframe)

@@ -1,6 +1,7 @@
 # Data manipulation
 
 - [Data manipulation](#data-manipulation)
+  * [Creating and setting panda DataFrame](#creating-and-setting-panda-dataframe)
   * [Join data](#join-data)
   * [Concat dataframe rows / cols](#concat-dataframe-rows---cols)
   * [Append data to dataframe](#append-data-to-dataframe)
@@ -23,6 +24,39 @@
     + [Remove a row by index value](#remove-a-row-by-index-value)
     + [Remove a row by row number](#remove-a-row-by-row-number)
     + [Remove a column](#remove-a-column)
+
+
+## Creating and setting panda DataFrame
+
+This two example will generate exactly the same dataframe
+
+```python
+import pandas as pd
+example_data = {
+    'column1': [1, 2, 3],
+    'column2':['A', 'B', 'C']
+}
+df = pd.DataFrame(example_data)
+```
+
+```python
+import pandas as pd
+example_data = [
+    {
+        'column1': 1,
+        'column2':'A'
+    },
+    {
+        'column1': 2,
+        'column2':'B'
+    },
+    {
+        'column1': 3,
+        'column2':'C'
+    },
+]
+df = pd.DataFrame(example_data)
+```
 
 ## Join data
 

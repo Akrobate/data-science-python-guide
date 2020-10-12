@@ -2,6 +2,7 @@
 
 - [Data manipulation](#data-manipulation)
   * [Creating and setting panda DataFrame](#creating-and-setting-panda-dataframe)
+  * [Managing indexes](#managing-indexes)
   * [Join data](#join-data)
   * [Concat dataframe rows / cols](#concat-dataframe-rows---cols)
   * [Append data to dataframe](#append-data-to-dataframe)
@@ -9,7 +10,6 @@
   * [Melt / Pivot data](#melt---pivot-data)
     + [Melt dataframe](#melt-dataframe)
     + [Pivot dataframe](#pivot-dataframe)
-  * [Managing indexes](#managing-indexes)
   * [Manipulating columns as string](#manipulating-columns-as-string)
   * [Rename columns names](#rename-columns-names)
   * [Changing columns types](#changing-columns-types)
@@ -56,6 +56,16 @@ example_data = [
     },
 ]
 df = pd.DataFrame(example_data)
+```
+
+## Managing indexes
+
+```python
+# Setting index
+my_df = my_df.set_index('column name')
+
+# resetting index
+my_df = my_df['column name'].reset_index()
 ```
 
 ## Join data
@@ -186,16 +196,6 @@ After pivoting data, the index can be altered. To get back a simple incremental 
 # reseting indexes on dataframe
 my_dataframe = my_dataframe.index.reset_index()
 print(my_dataframe.index) # will show new RangeIndex
-```
-
-## Managing indexes
-
-```python
-# Setting index
-my_df = my_df.set_index('column name')
-
-# resetting index
-my_df = my_df['column name'].reset_index()
 ```
 
 ## Manipulating columns as string

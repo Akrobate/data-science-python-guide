@@ -3,6 +3,7 @@
 - [Data manipulation](#data-manipulation)
   * [Creating and setting panda DataFrame](#creating-and-setting-panda-dataframe)
   * [Managing indexes](#managing-indexes)
+  * [Filtering data in panda](#filtering-data-in-panda)
   * [Join data](#join-data)
   * [Concat dataframe rows / cols](#concat-dataframe-rows---cols)
   * [Append data to dataframe](#append-data-to-dataframe)
@@ -82,6 +83,38 @@ dataframe_a = pd.merge(
     left_on='a_b_id',
     right_on='id')
 ```
+
+## Filtering data in panda
+
+Boolean Filtering
+
+```python
+import pandas as pd
+df = pd.DataFrame({
+    'column1': [1, 2, 3],
+    'column2':['A', 'B', 'C']
+})
+# Will return the first and the third row
+df[[True, False, True]]
+```
+
+Creating boolean filter
+
+```python
+import pandas as pd
+df = pd.DataFrame({
+    'column1': [1, 2, 3],
+    'column2':['A', 'B', 'C']
+})
+
+# boolean_filter will contain [False, True, True]
+boolean_filter = df.column1 >= 2
+
+# Will return the two last rows
+df[boolen_filter]
+```
+
+
 
 ## Concat dataframe rows / cols
 

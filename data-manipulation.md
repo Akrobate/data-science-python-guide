@@ -114,7 +114,20 @@ boolean_filter = df.column1 >= 2
 df[boolen_filter]
 ```
 
+Filtering using loc.
 
+```python
+import pandas as pd
+df = pd.DataFrame({
+    'column1': [1, 2, 3],
+    'column2':['A', 'B', 'C']
+})
+# Will return the two last rows
+df.loc[df.column1 >= 2]
+
+# Will return the two last rows and select the column2
+df.loc[df.column1 >= 2, ['column2']]
+```
 
 ## Concat dataframe rows / cols
 

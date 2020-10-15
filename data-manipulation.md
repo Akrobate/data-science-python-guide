@@ -129,6 +129,21 @@ df.loc[df.column1 >= 2]
 df.loc[df.column1 >= 2, ['column2']]
 ```
 
+Filtering using iloc.
+
+```python
+import pandas as pd
+df = pd.DataFrame({
+    'column1': [1, 2, 3],
+    'column2':['A', 'B', 'C']
+})
+# Will return the first row
+df.iloc[0]
+
+# Will return the first row and select the column2
+df.iloc[0, ['column2']]
+```
+
 ## Concat dataframe rows / cols
 
 Example of concatenating rows of n dataframes

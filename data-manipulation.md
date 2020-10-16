@@ -141,7 +141,7 @@ df = pd.DataFrame({
 df.iloc[0]
 
 # Will return the first row and select the column2
-df.iloc[0, ['column2']]
+df.iloc[0, [1]]
 ```
 
 ## Concat dataframe rows / cols

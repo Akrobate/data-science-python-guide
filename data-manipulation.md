@@ -69,6 +69,26 @@ my_df = my_df.set_index('column name')
 my_df = my_df['column name'].reset_index()
 ```
 
+## Selecting columns from a dataset
+
+```python
+import pandas as pd
+example_data = {
+    'column1': [1, 2, 3],
+    'column2':['A', 'B', 'C']
+    'column3':['A1', 'B2', 'C3']
+}
+
+df = pd.DataFrame(example_data)
+
+# Subselection of dataframe
+df_selection = df[['column1', 'column2']]
+
+# New dataframe from column
+df_new = df[['column1', 'column2']].copy()
+```
+
+
 ## Join data
 
 Example of making a merge with a left join very similar to mysql left join style

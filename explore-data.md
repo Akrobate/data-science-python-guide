@@ -24,6 +24,8 @@ my_dataframe.head()
 # Preview last dataframe rows
 my_dataframe.tail()
 
+# Count records in each column
+my_dataframe.count()
 ```
 
 ## Data exploring

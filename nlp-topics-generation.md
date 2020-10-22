@@ -1,5 +1,11 @@
 
-## MNF Topics generation
+# NLP Topic generation and similarity score
+
+- [NLP Topic generation and similarity score](#nlp-topic-generation-and-similarity-score)
+  * [Topics generation](#topics-generation)
+  * [Similarity score generation](#similarity-score-generation)
+
+## Topics generation
 
 Show main topics of a collection of text documents
 
@@ -43,6 +49,8 @@ After this, it could be interresting to know how much each document belong to a 
 # This will return a dataset with score of each topic in document
 nmf_features_topics = model_nmf.transform(vecotrized_texts)
 ```
+
+## Similarity score generation
 
 Now we can try to find similarity of documents with consine distance calculation
 

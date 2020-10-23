@@ -7,6 +7,8 @@
 
 ## Topics generation
 
+### Preparing data
+
 Show main topics of a collection of text documents
 
 ```python
@@ -31,6 +33,13 @@ tfidf_vectorizer = TfidfVectorizer(
 )
 vecotrized_texts = tfidf_vectorizer.fit_transform(source_dataframe['text_column'])
 words_features_names = tfidf_vectorizer.get_feature_names()
+
+```
+
+### Training the model
+
+```python
+# Lets assume previous code has allready been evaluated
 
 # Create an NMF instance: model
 model_nmf = NMF(n_components = 50, verbose=True)
@@ -72,6 +81,7 @@ search_similar_entries_with = normalized_nmf_features_topics_df.loc[0]
 similarities_cosine_score = normalized_nmf_features_topics_df.dot(search_similar_entries_with)
 
 # Display those with the largest cosine similarity
-print(similarities_cosine_score.nlargest(10))
+number_of_entities_to_dispaly
+print(similarities_cosine_score.nlargest(number_of_entities_to_dispaly))
 
 ```

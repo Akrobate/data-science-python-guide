@@ -3,6 +3,9 @@
 
 - [NLP Topic generation and similarity score](#nlp-topic-generation-and-similarity-score)
   * [Topics generation](#topics-generation)
+    + [Preparing data](#preparing-data)
+    + [Training the model](#training-the-model)
+    + [Appliyng trained model to the whole dataset](#appliyng-trained-model-to-the-whole-dataset)
   * [Similarity score generation](#similarity-score-generation)
 
 ## Topics generation
@@ -49,6 +52,8 @@ number_of_words_to_display_per_topic = 20
 generate_topics(model_nmf, words_features_names, number_of_words_to_display_per_topic)
 
 ```
+
+### Appliyng trained model to the whole dataset
 
 After this, it could be interresting to know how much each document belong to a topic or to another topic
 

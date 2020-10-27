@@ -109,6 +109,13 @@ df['date_year_string'] = df.date_column.dt.strftime('%Y')
 import pandas as pd
 data = pd.date_range('1998-03-10', '1998-03-15', freq='D')
 ```
+
+Convert generated range to python datetime type
+```python
+import pandas as pd
+data = pd.date_range('1998-03-10', '1998-03-15', freq='D').to_pydatetime()
+```
+
 Possible frequencies:
 
 * 'H' - hourly

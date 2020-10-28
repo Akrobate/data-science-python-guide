@@ -69,6 +69,20 @@ index = pd.DatetimeIndex(['2013-05-01', '2014-05-01', '2015-07-04', '2016-05-01'
 data = pd.Series([0, 1, 2, 3], index=index)
 ```
 
+## Panda Dataframe indexed by time
+
+```python
+import pandas as pd
+index = pd.DatetimeIndex(['2013-05-01', '2014-05-01', '2015-07-04', '2016-05-01'])
+data = pd.DataFrame(
+  {
+    'column_1': [0, 1, 2, 3],
+    'column_2': [0, 1, 2, 3]
+  },
+  index=index
+)
+```
+
 ### Using existing column to define as time index
 
 Important: To prevent errors while converting to datetime use errors parameter

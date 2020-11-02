@@ -47,7 +47,7 @@ classifier.compile(
 ```
 
 
-## Fitting the CNN and enriching images
+## Fitting the CNN and augmenting images
 
 ```python
 
@@ -84,4 +84,23 @@ classifier.fit(
     validation_data = test_set,
     validation_steps = 63
 )
+```
 
+
+## Making prediction on a signle image
+
+```python
+import numpy as np
+from keras.preprocessing import image
+
+test_image = image.load_img(
+    'cnn_dataset/image_to_predict',
+    target_size=(64,64))
+
+test_image = image.img_to_array(test_image)
+test_image = np.expand_dims(test_image, axis = 0)
+
+
+classes_mapping = training_set.class_indices
+prediction = classifier.predict(test_image)
+```

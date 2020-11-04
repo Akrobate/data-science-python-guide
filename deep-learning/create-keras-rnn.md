@@ -1,4 +1,4 @@
-# Building a Recurent Neuronal Network
+# Building a Recurent Neuronal Network (Keras)
 
 ```python
 # Building RNN

@@ -153,6 +153,21 @@ import pandas as pd
 df_2020 = my_dataframe.loc['2020':'2020']
 ```
 
+More complex example with date parse
+
+```python
+from dateutil import parser
+
+from_date_raw_string = '21 May 1985'
+to_date_raw_string = '22 May 1985'
+
+a = parser.parse(from_date_raw_string).strftime('%Y-%m-%d %H:%M:%S')
+b = parser.parse(to_date_raw_string).strftime('%Y-%m-%d %H:%M:%S')
+
+# my_dataframe an index of datetime type
+df_filtered = my_dataframe.loc[a:b]
+```
+
 ## Pandas resample time data
 
 ### Resample and count lines

@@ -36,3 +36,17 @@ conda install pandas
 # Install jupyter (Optionnal)
 conda install jupyter
 ```
+
+## Quick test if GPU calculation is available
+
+### test GPU available with tensorflow
+
+```python
+import tensorflow as tf
+
+if tf.test.gpu_device_name():
+    print('GPU calculation available')
+    print(tf.test.gpu_device_name())
+else:
+    print('No GPU found')
+```

@@ -50,7 +50,7 @@ conda install pytorch -c pytorch
 
 ## Quick test if GPU calculation is available
 
-### test GPU available with tensorflow
+### Test GPU available with tensorflow
 
 ```python
 import tensorflow as tf
@@ -60,4 +60,35 @@ if tf.test.gpu_device_name():
     print(tf.test.gpu_device_name())
 else:
     print('No GPU found')
+```
+
+### Test GPU available with pytorch
+
+```python
+import torch
+
+if torch.cuda.is_available():
+    print('GPU calculation available')
+    print(torch.cuda.get_device_name(0))
+else:
+    print('No GPU found')
+```
+
+Some usefull python functions to check GPU devices
+
+```python
+# Should retur device number (0)
+current_device = torch.cuda.current_device()
+
+# Should return something like <torch.cuda.device at 0x000000000000>
+torch.cuda.device(current_device)
+
+# Should return the total count of cuda devices
+torch.cuda.device_count()
+
+# Should return the GPU name, exemple: 'GeForce GTX 1060'
+device_name = torch.cuda.get_device_name(current_device)
+
+# Should return True if device is available
+torch.cuda.is_available()
 ```

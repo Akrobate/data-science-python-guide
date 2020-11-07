@@ -37,6 +37,17 @@ conda install pandas
 conda install jupyter
 ```
 
+## Install GPU calculation with pytorch
+
+```python
+# If you have not yet installed tensorflow-gpu
+conda install cudatoolkit=10.2 -c pytorch
+
+# Install pytorch stand alors from official pytorch channel
+conda install pytorch -c pytorch
+```
+
+
 ## Quick test if GPU calculation is available
 
 ### test GPU available with tensorflow

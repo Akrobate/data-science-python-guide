@@ -71,6 +71,8 @@ print(X[:,3].mean())
 
 ### Drop na values
 
+Drop NaN values using specific method
+
 ```python
 import pandas as pd
 my_df.dropna(
@@ -78,6 +80,20 @@ my_df.dropna(
     how = 'any',    # any to remove if any NaN is found, all if all is NaN,
     inplace = True  # Modify the current df
 )
+```
+
+Drop NaN values using boolean filter on specific column
+
+```python
+import pandas as pd
+my_df = my_df[my_df['column1'].notnnull()]
+```
+
+Drop NaN values using boolean filter on combination of columns
+
+```python
+import pandas as pd
+my_df = my_df[my_df['column1'].notnnull() & my_df['column2'].notnnull()]
 ```
 
 ## Dealing with Duplicate

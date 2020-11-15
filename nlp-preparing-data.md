@@ -72,3 +72,28 @@ def lemmantize(text):
 
 dataframe['text_column'] = dataframe['text_column'].apply(lambda value:lemmantize(value))
 ```
+
+## Filtering tokens using spacy
+
+Pos will detect the type of token, so here we can filter only on NOUNS VERBS and ADJECTIVES for instance. Is alpha will indicate if the token is composed only of letters
+
+Full reference for universal pos:
+https://universaldependencies.org/docs/u/pos/
+
+```python
+import spacy
+nlp = spacy.load('fr_core_news_md')
+
+text = "Etablissements est un fabricant des mécanismes de combinaison de coffre-fort, tours automatiques, décolletage en raccordement traditionnel."
+
+for token in nlp(text):
+    print('token: ' + str(token) )
+    print(' token.lemma_:' + token.lemma_ )
+    print(' token.ent_type_: ' + token.ent_type_ )
+    print(' token.norm__: ' + token.norm_ )
+    print(' token.is_stop: ' + str(token.is_stop))    
+    print(' token.pos_: ' + str(token.pos_))    
+    print(' token.lang_: ' + str(token.lang_))
+    print(' token.is_alpha: ' + str(token.is_alpha))
+
+```

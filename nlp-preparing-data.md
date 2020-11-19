@@ -80,6 +80,8 @@ Pos will detect the type of token, so here we can filter only on NOUNS VERBS and
 Full reference for universal pos:
 https://universaldependencies.org/docs/u/pos/
 
+Preview data available in a token
+
 ```python
 import spacy
 nlp = spacy.load('fr_core_news_md')
@@ -96,4 +98,24 @@ for token in nlp(text):
     print(' token.lang_: ' + str(token.lang_))
     print(' token.is_alpha: ' + str(token.is_alpha))
 
+```
+
+Filter data by NOUN VERB and ADJ.
+
+```python
+import spacy
+nlp = spacy.load('fr_core_news_md')
+
+def lemma_sentence(text)
+    list_result = []
+    for token in nlp(text):
+        accpeted_pos = ['NOUN', 'VERB', 'ADJ']
+        if (token.pos_ in accpeted_pos and token.is_alpha):
+            list_result.append(token.lemma_)
+    return " ".join(list_result)
+
+text = "Etablissements est un fabricant des mécanismes de combinaison de coffre-fort, tours automatiques, décolletage en raccordement traditionnel."
+
+lemma_text = lemma_sentence(text)
+print(lemma_text)
 ```

@@ -31,7 +31,7 @@ pip install msvc-runtime
 pip install matplotlib
 
 # installing pydot (for model previewing) (optionnal)
-conda install -c conda-forge pydot  graphviz
+conda install -c conda-forge pydot graphviz
 
 # Install pandas (Optionnal)
 conda install pandas

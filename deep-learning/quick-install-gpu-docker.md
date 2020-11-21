@@ -5,6 +5,9 @@ Procedure tested on ubuntu 18.04 with a NVIDIA GTX 1060 6go
 ## Installing Nvidia GPU drivers on host machine
 
 ```bash
+# View GPU card name
+sudo lshw -C display
+
 # Add ppa
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
@@ -57,3 +60,31 @@ sudo usermod -aG docker ${USER}
 # Check user was added to group
 id -nG
 ```
+
+## Installing nvidia container run time
+
+```bash
+# Adding source lists and GPG Keys 
+# (source: https://nvidia.github.io/nvidia-container-runtime/)
+curl -s -L https://nvidia.github.io/nvidia-container-runtime/gpgkey | \
+  sudo apt-key add -
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-container-runtime/$distribution/nvidia-container-runtime.list | \
+  sudo tee /etc/apt/sources.list.d/nvidia-container-runtime.list
+
+sudo apt-get update
+
+# Install nvidia-container-runtime
+sudo apt-get install nvidia-container-runtime
+
+# Docker server restart 
+sudo systemctl restart docker
+
+# Test installation
+docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
+
+# Test installation on ubuntu image (should aloso work)
+docker run -it --rm --gpus all ubuntu nvidia-smi
+```
+
+

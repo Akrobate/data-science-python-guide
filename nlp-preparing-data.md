@@ -106,7 +106,7 @@ Filter data by NOUN VERB and ADJ.
 import spacy
 nlp = spacy.load('fr_core_news_md')
 
-def lemma_sentence(text)
+def lemma_sentence(text):
     list_result = []
     for token in nlp(text):
         accpeted_pos = ['NOUN', 'VERB', 'ADJ']

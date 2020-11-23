@@ -61,7 +61,7 @@ sudo usermod -aG docker ${USER}
 id -nG
 ```
 
-## Installing nvidia container run time
+## Installing nvidia container run time (host machine)
 
 ```bash
 # Adding source lists and GPG Keys 

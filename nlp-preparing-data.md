@@ -10,6 +10,11 @@
 
 ## TfIdfVectorizer
 
+
+Tfidftransformer will systematically compute word counts using CountVectorizer and then compute the Inverse Document Frequency.
+
+With Tfidfvectorizer on the contrary, you will do all three steps at once
+
 ```python
 from sklearn.feature_extraction.text import TfidfVectorizer
 

@@ -29,6 +29,7 @@ my_dataframe.count()
 ```
 
 ## Data exploring
+
 ```python
 # returns list of column names
 my_dataframe.columns

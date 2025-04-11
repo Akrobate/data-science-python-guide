@@ -5,14 +5,14 @@ Full own memo about technics of machine learning with python
 
 ## Machine learning
 
-1. Data loading
-2. Explore data
+1. [Data loading](./data-loading.md)
+2. [Explore data](./explore-data.md)
     1. Fundamentals of data exploration
     2. Visualize data
-3. Cleaning data
-4. Data manipulation
+3. [Cleaning data](./cleaning-data.md)
+4. [Data manipulation](./data-manipulation.md)
     1. General data manipulation
-    2. Time series data manipulation
+    2. [Time series data manipulation](./data-manipulation-time-series.md)
     3. Geographical data manipulation
 5. Machine learning
     1. Overview

@@ -16,17 +16,21 @@ Full own memo about technics of machine learning with python
     3. [Geographical data manipulation](./data-manipulation-geodata.md)
 5. Machine learning
     1. Overview
-    2. Classification
-    3. Regression
-    4. [Grid search](./ml-grid-search.md)
-    5. [K-Fold cross validation](./ml-k-fold-cross-validation.md)
-    5. Natural language processing
+    2. [Preparing data](./preparing-data.md)
+    3. Classification
+    4. Regression
+    5. [Grid search](./ml-grid-search.md)
+    6. [K-Fold cross validation](./ml-k-fold-cross-validation.md)
+    7. Natural language processing
         1. [NLP Preparing data](./nlp-preparing-data.md)
         2. [NLP Topic generation](./nlp-topics-generation.md)
-
-
 6. Model testing
 7. [Pipelines](./pipelines.md)
+8. Tools
+    1. [Anaconda quick install](./quick-install-anaconda-ubuntu.md)
+
+
+
 
 ---
 

@@ -8,7 +8,7 @@ Full own memo about technics of machine learning with python
 1. [Data loading](./data-loading.md)
 2. [Explore data](./explore-data.md)
     1. Fundamentals of data exploration
-    2. Visualize data
+    2. [Visualize data](./visualize-data.md)
 3. [Cleaning data](./cleaning-data.md)
 4. Data manipulation
     1. [General data manipulation](./data-manipulation.md)
@@ -26,8 +26,9 @@ Full own memo about technics of machine learning with python
         2. [NLP Topic generation](./nlp-topics-generation.md)
 6. Model testing
 7. [Pipelines](./pipelines.md)
-8. Tools
+8. Misc
     1. [Anaconda quick install](./quick-install-anaconda-ubuntu.md)
+    2. [Usefull tricks](./usefull-trics.md)
 
 
 

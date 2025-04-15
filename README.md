@@ -29,6 +29,7 @@ Full own memo about technics of machine learning with python
 8. Misc
     1. [Anaconda quick install](./quick-install-anaconda-ubuntu.md)
     2. [Usefull tricks](./usefull-trics.md)
+9. [DeepLearning](./deep-learning/README.md)
 
 
 

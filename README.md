@@ -29,6 +29,10 @@ Full own memo about technics of machine learning with python
 8. Misc
     1. [Anaconda quick install](./quick-install-anaconda-ubuntu.md)
     2. [Usefull tricks](./usefull-trics.md)
+    3. GPU
+        * [quick install gpu docker](./quick-install-gpu-docker.md)
+        * [quick install gpu env](./quick-install-gpu-env.md)
+        * [quick install keras env](./quick-install-keras-env.md)
 9. [DeepLearning](./deep-learning/README.md)
 
 
